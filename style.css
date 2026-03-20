@@ -38,7 +38,7 @@ header {
     display: flex !important;
     justify-content: space-between !important; /* Logo a un lado, menú al otro */
     align-items: center !important;
-    padding: 20px 5% !important;
+    padding: 10px 5% !important;
     width: 100% !important;
     position: relative !important;
 }
@@ -174,7 +174,7 @@ nav ul li a {
     justify-content: center;
     gap: 20px;
     border-top: 1px solid #333;
-    padding-top: 40px;
+    padding-top: 25px;
 }
 
 .valores-grid span {
@@ -547,4 +547,36 @@ nav ul {
         left: 50% !important;
         transform: translateX(-50%) !important;
     }
+}
+/* --- AJUSTE DE CABECERA MANA --- */
+/* Ajuste específico para que el logo no se vea gigante arriba */
+header img, .logo img {
+    max-height: 50px;                   /* Ajusta este número si quieres el logo más grande o chico */
+}
+/* --- ESTILO PARA EL HEADER DE MANA --- */
+
+header {
+    display: flex;
+    justify-content: space-between; /* Empuja el logo a la izquierda y el menú a la derecha */
+    align-items: center;           /* Los centra verticalmente entre ellos */
+    padding: 20px 5%;              /* 20px de espacio arriba y 5% a los lados */
+    position: absolute;            /* Hace que flote sobre el fondo negro */
+    top: 0;                        /* Lo pega al techo de la página */
+    left: 0;
+    width: 100%;                   /* Ocupa todo el ancho */
+    z-index: 1000;                 /* Asegura que siempre esté por encima de las fotos */
+}
+
+.logo img {
+    height: 60px;                  /* Ajusta el tamaño de tu logo MANA aquí */
+    width: auto;
+}
+
+.menu a {
+    color: white;                  /* Letras blancas para el fondo negro */
+    text-decoration: none;
+    margin-left: 30px;             /* Espacio entre los botones */
+    font-family: 'Arial', sans-serif; /* O la que estés usando */
+    font-size: 14px;
+    letter-spacing: 2px;           /* Espaciado entre letras para toque moderno */
 }

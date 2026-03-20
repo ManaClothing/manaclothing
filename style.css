@@ -1,16 +1,22 @@
 /* Configuración General */
-.drop-content h1, .drop-content p {
+.drop-content h1,
+.drop-content p {
     text-align: center;
     width: 100%;
 }
 
 /* 2. El contenedor de los cuadros: flex para ponerlos uno al lado del otro */
-.drop-container, .products-grid {
+.drop-container,
+.products-grid {
     display: flex !important;
-    flex-direction: row !important; /* Fuerza a que estén uno al lado del otro */
-    justify-content: center !important; /* Centra el grupo de cuadros */
-    flex-wrap: wrap !important; /* Si añades más, bajan solitos */
-    gap: 50px !important; /* Espacio entre cuadros */
+    flex-direction: row !important;
+    /* Fuerza a que estén uno al lado del otro */
+    justify-content: center !important;
+    /* Centra el grupo de cuadros */
+    flex-wrap: wrap !important;
+    /* Si añades más, bajan solitos */
+    gap: 50px !important;
+    /* Espacio entre cuadros */
     margin: 60px auto !important;
     width: 100% !important;
     max-width: 1200px !important;
@@ -18,25 +24,34 @@
 
 /* 3. El tamaño de cada cuadro individual */
 .product-card {
-    width: 380px !important; /* Tamaño fijo para que se vean iguales */
+    width: 380px !important;
+    /* Tamaño fijo para que se vean iguales */
     text-align: center !important;
 }
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Helvetica', sans-serif; /* Zara usa tipografías muy limpias */
+    font-family: 'Helvetica', sans-serif;
+    /* Zara usa tipografías muy limpias */
 }
-.hidden { display: none !important; }
+
+.hidden {
+    display: none !important;
+}
+
 body {
-    background-color: #000; /* Negro total */
+    background-color: #000;
+    /* Negro total */
     color: #fff;
 }
 
 /* Menú de Navegación */
 header {
     display: flex !important;
-    justify-content: space-between !important; /* Logo a un lado, menú al otro */
+    justify-content: space-between !important;
+    /* Logo a un lado, menú al otro */
     align-items: center !important;
     padding: 10px 5% !important;
     width: 100% !important;
@@ -46,33 +61,48 @@ header {
 nav ul li a {
     color: #fff;
     text-decoration: none;
-    font-size: 0.75rem; /* Letra un poco más pequeña, estilo lujo */
+    font-size: 0.75rem;
+    /* Letra un poco más pequeña, estilo lujo */
     letter-spacing: 3px;
     font-weight: 700;
     transition: 0.3s;
 }
 
 nav ul li a:hover {
-    color: #888; /* Color gris al pasar el mouse */
+    color: #888;
+    /* Color gris al pasar el mouse */
 }
+
+/* --- ESTO ARREGLA EL TAMAÑO DEL LOGO EN PC --- */
+
+/* FUERZA BRUTA PARA EL LOGO MANA */
 .logo {
-    position: relative !important;
+    display: block !important;
+    width: 300px !important;  /* Le damos un ancho fijo al contenedor */
+    height: auto !important;
     margin: 0 !important;
+    padding: 0 !important;
 }
 
 .logo img {
-    width: 200px;
-    transition: filter 0.3s ease;
-    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.2)); /* Brillo sutil base */
+    width: 100% !important;   /* Que use todo el ancho de los 300px */
+    height: auto !important;  /* Que la altura se ajuste sola */
+    min-width: 250px !important; /* Que no baje de 250px por nada del mundo */
+    max-width: none !important;
+    display: block !important;
 }
 .logo img:hover {
-    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.8)) !important; /* Brillo fuerte al pasar el mouse */
+    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.8)) !important;
+    /* Brillo fuerte al pasar el mouse */
 }
+
 nav {
     display: flex;
-    justify-content: flex-end; /* Alinea los botones a la derecha */
+    justify-content: flex-end;
+    /* Alinea los botones a la derecha */
     padding-right: 50px;
 }
+
 nav ul {
     display: flex !important;
     gap: 40px !important;
@@ -97,13 +127,15 @@ nav ul li a {
     justify-content: center;
     align-items: center;
     text-align: center;
-    background: transparent; /* El video se verá por detrás */
+    background: transparent;
+    /* El video se verá por detrás */
     width: 100%;
 }
 
 .hero h1 {
     font-size: 5rem;
-    font-family: 'Helvetica', sans-serif; /* O si prefieres la futurista Orbitron, pon esa */
+    font-family: 'Helvetica', sans-serif;
+    /* O si prefieres la futurista Orbitron, pon esa */
     font-weight: bold;
     letter-spacing: 15px;
     text-transform: uppercase;
@@ -123,6 +155,7 @@ nav ul li a {
     background-color: #fff;
     color: #000;
 }
+
 /* Estilos para la página Sobre Nosotros */
 .nosotros-page {
     background-color: #000;
@@ -135,7 +168,8 @@ nav ul li a {
 
 .manifiesto-container {
     max-width: 800px;
-    padding: 150px 20px 50px 20px; /* Espacio para que el header no tape el texto */
+    padding: 150px 20px 50px 20px;
+    /* Espacio para que el header no tape el texto */
     text-align: center;
 }
 
@@ -144,7 +178,8 @@ nav ul li a {
 .introduccion {
     font-size: 1.4rem;
     letter-spacing: 3px;
-    font-weight: 700; /* Grosor máximo */
+    font-weight: 700;
+    /* Grosor máximo */
     margin-bottom: 50px;
 }
 
@@ -152,10 +187,12 @@ nav ul li a {
     margin-bottom: 40px;
 }
 
-.bloque-info h2, .seccion-valores h2 {
+.bloque-info h2,
+.seccion-valores h2 {
     font-size: 0.8rem;
     letter-spacing: 5px;
-    color: #bbb; /* Un gris un poco más claro para que se lea mejor */
+    color: #bbb;
+    /* Un gris un poco más claro para que se lea mejor */
     font-weight: 700;
 }
 
@@ -163,10 +200,12 @@ nav ul li a {
 /* 4. Letras más gruesas para Misión y Visión */
 .bloque-info p {
     font-size: 1.1rem;
-    font-weight: 600; /* Más gruesa para que resalte */
+    font-weight: 600;
+    /* Más gruesa para que resalte */
     letter-spacing: 1px;
     line-height: 1.8;
 }
+
 .valores-grid {
     margin-top: 80px;
     display: flex;
@@ -189,14 +228,17 @@ nav ul li a {
     background: #fff;
     color: #000;
 }
+
 /* Estilo para el logo en la página de Nosotros */
 /* 2. Subir el logo y quitarle espacio abajo */
 .logo-nosotros img {
-    height: 350px; 
+    height: 350px;
     width: auto;
     filter: invert(1);
-    margin-top: -40px;    /* Sube el logo al techo */
-    margin-bottom: -110px; /* Pega el texto al logo */
+    margin-top: -40px;
+    /* Sube el logo al techo */
+    margin-bottom: -110px;
+    /* Pega el texto al logo */
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -205,7 +247,8 @@ nav ul li a {
 /* 1. Subir todo el contenido */
 .manifiesto-container {
     max-width: 900px;
-    padding-top: 20px; /* Reducido para que no haya tanto espacio negro arriba */
+    padding-top: 20px;
+    /* Reducido para que no haya tanto espacio negro arriba */
     margin: 0 auto;
     text-align: center;
 }
@@ -214,7 +257,8 @@ nav ul li a {
 .nosotros-page header {
     display: flex;
     justify-content: flex-end;
-    padding: 40px 60px; /* Ajusta este padding para subirlo o bajarlo */
+    padding: 40px 60px;
+    /* Ajusta este padding para subirlo o bajarlo */
     position: absolute;
     top: 0;
     width: 100%;
@@ -222,15 +266,18 @@ nav ul li a {
 
 /* Botón de INICIO */
 .nosotros-page nav ul li a {
-    font-weight: 800; /* Grosor máximo para que destaque arriba */
+    font-weight: 800;
+    /* Grosor máximo para que destaque arriba */
     letter-spacing: 3px;
     font-size: 0.9rem;
 }
+
 /* Quitar la línea blanca y dar estilo al título VALORES */
 /* 5. Quitar la línea de los valores */
 .seccion-valores {
     margin-top: 60px;
-    border-top: none !important; /* El !important asegura que la línea muera */
+    border-top: none !important;
+    /* El !important asegura que la línea muera */
 }
 
 .seccion-valores h2 {
@@ -239,6 +286,7 @@ nav ul li a {
     color: #888;
     margin-bottom: 30px;
 }
+
 /* Página de Drop 01 */
 .drop-page {
     background-color: #000;
@@ -252,7 +300,8 @@ nav ul li a {
     text-align: center;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Esto centra todo horizontalmente */
+    align-items: center;
+    /* Esto centra todo horizontalmente */
     text-align: center;
     width: 100%;
 }
@@ -280,25 +329,30 @@ nav ul li a {
 }
 
 .item-prototipo {
-    background: #0a0a0a; /* Un negro ligeramente distinto para que resalte */
+    background: #0a0a0a;
+    /* Un negro ligeramente distinto para que resalte */
     padding: 20px;
     border: 1px solid #1a1a1a;
     transition: 0.5s;
 }
 
 .item-prototipo:hover {
-    border-color: #fff; /* Se ilumina el borde al pasar el mouse */
+    border-color: #fff;
+    /* Se ilumina el borde al pasar el mouse */
 }
 
 /* El cuadro base */
 .placeholder-img {
     width: 100%;
-    height: 450px; /* Le di un poco más de altura para que se vea más imponente */
+    height: 450px;
+    /* Le di un poco más de altura para que se vea más imponente */
     background-color: #0a0a0a;
     border: 1px solid #1a1a1a;
-    transition: all 0.5s ease; /* Esta es la clave del movimiento suave */
+    transition: all 0.5s ease;
+    /* Esta es la clave del movimiento suave */
     margin-bottom: 20px;
 }
+
 .item-prototipo p {
     font-size: 0.8rem;
     letter-spacing: 2px;
@@ -323,6 +377,7 @@ nav ul li a {
     background: #fff;
     color: #000;
 }
+
 /* --- SECCIÓN PIE DE PÁGINA DROP 01 --- */
 .aviso-registro {
     margin-top: 80px;
@@ -333,10 +388,12 @@ nav ul li a {
 .aviso-registro p {
     font-size: 0.9rem;
     letter-spacing: 3px;
-    font-weight: 600; /* Para que se vea más grueso como querías */
+    font-weight: 600;
+    /* Para que se vea más grueso como querías */
     margin-bottom: 25px;
     color: #fff;
-    text-transform: uppercase; /* Esto lo pone en mayúsculas automáticamente */
+    text-transform: uppercase;
+    /* Esto lo pone en mayúsculas automáticamente */
 }
 
 .btn-ig {
@@ -355,14 +412,17 @@ nav ul li a {
     background: #fff;
     color: #000;
 }
+
 /* Contenedor de los botones sociales */
 .social-links {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap; /* Para que en celular se pongan uno debajo del otro si no entran */
+    flex-wrap: wrap;
+    /* Para que en celular se pongan uno debajo del otro si no entran */
     gap: 15px;
     margin-top: 20px;
 }
+
 /* Estilo unificado para todos los botones */
 .btn-social {
     display: inline-block;
@@ -374,26 +434,35 @@ nav ul li a {
     letter-spacing: 3px;
     font-weight: 700;
     transition: 0.4s;
-    min-width: 140px; /* Para que todos tengan el mismo ancho */
+    min-width: 140px;
+    /* Para que todos tengan el mismo ancho */
 }
+
 .btn-social:hover {
     background: #fff;
     color: #000;
 }
+
 /* LA REACCIÓN AL PASAR EL MOUSE (Hover) */
 .item-prototipo:hover .placeholder-img {
-    border-color: #fff;       /* El borde se vuelve blanco puro */
-    background-color: #111;    /* El fondo se aclara penitas */
-    transform: translateY(-5px); /* El cuadro sube un poquito, como si flotara */
-    box-shadow: 0 10px 30px rgba(255, 255, 255, 0.05); /* Un brillo muy sutil abajo */
+    border-color: #fff;
+    /* El borde se vuelve blanco puro */
+    background-color: #111;
+    /* El fondo se aclara penitas */
+    transform: translateY(-5px);
+    /* El cuadro sube un poquito, como si flotara */
+    box-shadow: 0 10px 30px rgba(255, 255, 255, 0.05);
+    /* Un brillo muy sutil abajo */
 }
 
 /* También haremos que el texto de la prenda reaccione */
 .item-prototipo:hover p {
     color: #fff;
-    letter-spacing: 6px; /* Las letras se separan un poco al pasar el mouse */
+    letter-spacing: 6px;
+    /* Las letras se separan un poco al pasar el mouse */
     transition: 0.5s;
 }
+
 /* 1. Aseguramos que el menú se vea en línea */
 nav ul {
     display: flex;
@@ -410,13 +479,16 @@ nav ul {
 
 /* 3. El cuadro que está escondido (Dropdown) */
 .dropdown-content {
-    display: none; /* Aquí se esconde */
+    display: none;
+    /* Aquí se esconde */
     position: absolute;
-    background-color: #000; /* Fondo negro MANA */
+    background-color: #000;
+    /* Fondo negro MANA */
     min-width: 220px;
-    border: 1px solid #333; /* Un borde sutil */
+    border: 1px solid #333;
+    /* Un borde sutil */
     z-index: 1000;
-    top: 100%; 
+    top: 100%;
     left: 0;
     text-align: left;
 }
@@ -435,7 +507,8 @@ nav ul {
 /* 5. Qué pasa cuando pasas el mouse por las opciones del cuadro */
 .dropdown-content a:hover {
     background-color: #111;
-    letter-spacing: 4px; /* Efecto de expansión */
+    letter-spacing: 4px;
+    /* Efecto de expansión */
     color: #fff;
 }
 
@@ -443,88 +516,50 @@ nav ul {
 .dropdown:hover .dropdown-content {
     display: block;
 }
+
 /* Esto arregla la PC: busca tu contenedor de productos */
-.drop-container, .products-grid {
+.drop-container,
+.products-grid {
     display: flex !important;
-    flex-direction: row !important; /* Fuerza a que estén uno al lado del otro */
-    justify-content: center !important; /* Centra el grupo de cuadros */
-    flex-wrap: wrap !important; /* Si añades más, bajan solitos */
-    gap: 50px !important; /* Espacio entre cuadros */
+    flex-direction: row !important;
+    /* Fuerza a que estén uno al lado del otro */
+    justify-content: center !important;
+    /* Centra el grupo de cuadros */
+    flex-wrap: wrap !important;
+    /* Si añades más, bajan solitos */
+    gap: 50px !important;
+    /* Espacio entre cuadros */
     margin: 60px auto !important;
     width: 100% !important;
     max-width: 1200px !important;
 }
-.grid-container 
+
+.grid-container
+
 /* Asegura que el título también esté al centro en PC */
-.drop-content h1, .drop-content p {
+.drop-content h1,
+.drop-content p {
     text-align: center !important;
     width: 100% !important;
 }
+
 /* --- AJUSTES SOLO PARA CELULARES --- */
 /* --- AJUSTE MAESTRO DE POSICIONAMIENTO PARA CELULAR --- */
 @media (max-width: 768px) {
-    /* 1. El Header: le damos mucho más espacio para que quepa el logo sin tapar nada */
-    header {
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
-        min-height: 300px !important; /* Espacio de sobra para logo y menú */
-        padding-top: 20px !important;
-        position: relative !important;
-    }
 
-    /* 2. El Menú: lo dejamos arriba del todo */
-    nav {
-        order: 1 !important;
-        margin-bottom: 20px !important;
-        z-index: 100 !important;
-    }
-
-    /* 3. EL LOGO: lo bajamos para que esté en el espacio negro */
-    .logo {
-        order: 2 !important;
-        position: relative !important; /* Cambiamos a RELATIVE para que empuje el contenido hacia abajo y no lo tape */
-        margin: 20px auto !important;
-        top: 0 !important;
-        left: 0 !important;
-        transform: none !important;
-        z-index: 10 !important;
-    }
-
-    .logo img {
-        width: 180px !important; /* Tamaño ajustado para que no sea gigante en Drop 01 */
-    }
-
-    /* 4. El Contenido (Títulos y Cuadros): Los empujamos hacia abajo */
-    .hero-content, .drop-content, .nosotros-content {
-        margin-top: 40px !important; /* Espacio extra después del logo */
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
-        width: 100% !important;
-    }
-
-    /* 5. Los Cuadros del Drop 01: Uno abajo del otro en celular pero centrados */
-    .products-grid, .drop-container {
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
-        gap: 30px !important;
-        width: 100% !important;
-    }
-
-    /* Asegura que el texto de Nosotros no se mueva de nuevo */
+    /* Ajuste de texto Nosotros */
     .nosotros-content p {
         width: 85% !important;
         text-align: center !important;
         margin: 15px auto !important;
     }
-}
-    @media (max-width: 768px) {
-    /* Reset total para evitar que se mueva a la derecha */
-    .nosotros-content, .about-section, main {
+
+    /* Reset total de contenedores */
+    .nosotros-content,
+    .about-section,
+    main {
         width: 100% !important;
-        max-width: 100vw !important; /* Evita el desbordamiento horizontal */
+        max-width: 100vw !important;
         padding: 20px !important;
         margin: 0 !important;
         display: flex !important;
@@ -533,50 +568,141 @@ nav ul {
         text-align: center !important;
         overflow-x: hidden !important;
     }
-
-    .nosotros-content p {
-        width: 100% !important;
-        margin: 15px 0 !important;
-        padding: 0 10px !important;
-        text-align: center !important;
-        box-sizing: border-box !important;
-    }
-
-    /* Asegura que el logo no empuje el contenido a los lados */
-    .logo {
-        left: 50% !important;
-        transform: translateX(-50%) !important;
-    }
 }
-/* --- AJUSTE DE CABECERA MANA --- */
-/* Ajuste específico para que el logo no se vea gigante arriba */
-header img, .logo img {
-    max-height: 50px;                   /* Ajusta este número si quieres el logo más grande o chico */
-}
-/* --- ESTILO PARA EL HEADER DE MANA --- */
 
-header {
-    display: flex;
-    justify-content: space-between; /* Empuja el logo a la izquierda y el menú a la derecha */
-    align-items: center;           /* Los centra verticalmente entre ellos */
-    padding: 20px 5%;              /* 20px de espacio arriba y 5% a los lados */
-    position: absolute;            /* Hace que flote sobre el fondo negro */
-    top: 0;                        /* Lo pega al techo de la página */
-    left: 0;
-    width: 100%;                   /* Ocupa todo el ancho */
-    z-index: 1000;                 /* Asegura que siempre esté por encima de las fotos */
+/* Esta llave cierra el @media de arriba */
+
+/* --- Estilos generales (fuera del media query) --- */
+
+.nosotros-content p {
+    width: 100% !important;
+    margin: 15px 0 !important;
+    padding: 0 10px !important;
+    text-align: center !important;
+    box-sizing: border-box !important;
+}
+
+.logo {
+    left: 50% !important;
+    transform: translateX(-50%) !important;
 }
 
 .logo img {
-    height: 60px;                  /* Ajusta el tamaño de tu logo MANA aquí */
-    width: auto;
+    width: 180px !important;
+    /* Tamaño ajustado para que no sea gigante en Drop 01 */
 }
 
-.menu a {
-    color: white;                  /* Letras blancas para el fondo negro */
-    text-decoration: none;
-    margin-left: 30px;             /* Espacio entre los botones */
-    font-family: 'Arial', sans-serif; /* O la que estés usando */
-    font-size: 14px;
-    letter-spacing: 2px;           /* Espaciado entre letras para toque moderno */
+/* 4. El Contenido (Títulos y Cuadros): Los empujamos hacia abajo */
+.hero-content,
+.drop-content,
+.nosotros-content {
+    margin-top: 40px !important;
+    /* Espacio extra después del logo */
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    width: 100% !important;
+}
+
+/* 5. Los Cuadros del Drop 01: Uno abajo del otro en celular pero centrados */
+.products-grid,
+.drop-container {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 30px !important;
+    width: 100% !important;
+}
+
+/* Asegura que el texto de Nosotros no se mueva de nuevo */
+.nosotros-content p {
+    width: 85% !important;
+    text-align: center !important;
+    margin: 15px auto !important;
+}
+
+/* --- ESTO REEMPLAZA LAS LÍNEAS 522 A 535 --- */
+
+/* Reset para evitar movimiento a la derecha en móviles */
+.nosotros-content,
+.about-section,
+main {
+    width: 100% !important;
+    max-width: 100vw !important;
+    padding: 20px !important;
+    margin: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    overflow-x: hidden !important;
+}
+
+/* Cerramos el bloque media una sola vez al final de todo lo de móvil */
+
+
+.nosotros-content p {
+    width: 100% !important;
+    margin: 15px 0 !important;
+    padding: 0 10px !important;
+    text-align: center !important;
+    box-sizing: border-box !important;
+}
+
+/* Asegura que el logo no empuje el contenido a los lados */
+.logo {
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+}
+
+/* --- ESTO ES PARA PC Y TODO TIPO DE PANTALLA --- */
+
+header {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding: 20px 5% !important;
+    /* Espacio arriba y a los lados */
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    z-index: 1000 !important;
+    background: transparent !important;
+    /* Para que se vea el fondo negro de la web */
+}
+
+.logo img {
+    height: 200px !important;
+    /* Ajusta el tamaño de MANA en PC */
+    width: auto !important;
+}
+
+nav.menu {
+    display: flex !important;
+    gap: 40px !important;
+    /* Espacio entre botones */
+}
+
+nav.menu a {
+    color: white !important;
+    text-decoration: none !important;
+    font-size: 14px !important;
+    letter-spacing: 2px !important;
+    font-weight: bold !important;
+}
+/* --- FORZAR LOGO MANA --- */
+
+header .logo {
+    display: flex !important;
+    width: auto !important;
+    height: auto !important;
+}
+
+header .logo img {
+    width: 250px !important;  /* Prueba con 250px o 300px */
+    height: auto !important;
+    max-width: none !important;
+    min-width: 200px !important;
+    display: block !important;
 }

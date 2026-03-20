@@ -47,79 +47,6 @@ body {
     color: #fff;
 }
 
-/* Menú de Navegación */
-header {
-    display: flex !important;
-    justify-content: space-between !important;
-    /* Logo a un lado, menú al otro */
-    align-items: center !important;
-    padding: 10px 5% !important;
-    width: 100% !important;
-    position: relative !important;
-}
-
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 0.75rem;
-    /* Letra un poco más pequeña, estilo lujo */
-    letter-spacing: 3px;
-    font-weight: 700;
-    transition: 0.3s;
-}
-
-nav ul li a:hover {
-    color: #888;
-    /* Color gris al pasar el mouse */
-}
-
-/* --- ESTO ARREGLA EL TAMAÑO DEL LOGO EN PC --- */
-
-/* FUERZA BRUTA PARA EL LOGO MANA */
-.logo {
-    display: block !important;
-    width: 300px !important;  /* Le damos un ancho fijo al contenedor */
-    height: auto !important;
-    margin: 0 !important;
-    padding: 0 !important;
-}
-
-.logo img {
-    width: 100% !important;   /* Que use todo el ancho de los 300px */
-    height: auto !important;  /* Que la altura se ajuste sola */
-    min-width: 250px !important; /* Que no baje de 250px por nada del mundo */
-    max-width: none !important;
-    display: block !important;
-}
-.logo img:hover {
-    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.8)) !important;
-    /* Brillo fuerte al pasar el mouse */
-}
-
-nav {
-    display: flex;
-    justify-content: flex-end;
-    /* Alinea los botones a la derecha */
-    padding-right: 50px;
-}
-
-nav ul {
-    display: flex !important;
-    gap: 40px !important;
-    list-style: none !important;
-}
-
-nav ul li {
-    margin-left: 20px;
-}
-
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 0.8rem;
-    letter-spacing: 2px;
-}
-
 /* Sección Hero */
 .hero {
     height: 100vh;
@@ -518,33 +445,36 @@ nav ul {
 }
 /* --- ESTILO PARA PC Y MÓVIL (FUERA DE CUALQUIER LLAVE EXTRA) --- */
 
+/* --- CONFIGURACIÓN FINAL DEL HEADER MANA --- */
+/* --- CONFIGURACIÓN DEFINITIVA DEL HEADER MANA --- */
 header {
     display: flex !important;
-    justify-content: space-between !important; /* Separa logo de botones */
-    align-items: flex-start !important;       /* Alinea todo al borde superior */
-    padding: 5px 5% !important;               /* Mínimo espacio arriba (5px) */
-    position: absolute !important;
+    justify-content: space-between !important; 
+    align-items: center !important; 
+    padding: 15px 6% !important; 
+    position: absolute !important; /* Esto lo pega arriba del video */
     top: 0 !important;
+    left: 0 !important;
     width: 100% !important;
     z-index: 1000 !important;
+    background: transparent !important;
 }
 
 header .logo {
     display: block !important;
-    width: 400px !important;    /* Ajusta este número para el tamaño de la 'M' */
+    width: 300px !important; /* Ajusta este número para agrandar la 'M' */
     margin: 0 !important;
-    transform: none !important;
-    left: auto !important;
 }
 
 header .logo img {
-    width: 300px !important;    /* Ajusta según qué tan grande quieras la 'M' */
+    width: 100% !important;
     height: auto !important;
-    margin-top: 0 !important;   /* Asegura que no tenga margen arriba */
+    display: block !important;
 }
 
 nav.menu {
-    margin-top: 15px !important; /* Ajusta esto para alinear los botones con el centro del logo */
+    display: flex !important;
+    gap: 40px !important; /* Esto separa COLECCIONES de SOBRE NOSOTROS */
 }
 
 nav.menu a {

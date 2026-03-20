@@ -1,486 +1,135 @@
-/* Configuración General */
-.drop-content h1,
-.drop-content p {
-    text-align: center;
-    width: 100%;
-}
-
-/* 2. El contenedor de los cuadros: flex para ponerlos uno al lado del otro */
-.drop-container,
-.products-grid {
-    display: flex !important;
-    flex-direction: row !important;
-    /* Fuerza a que estén uno al lado del otro */
-    justify-content: center !important;
-    /* Centra el grupo de cuadros */
-    flex-wrap: wrap !important;
-    /* Si añades más, bajan solitos */
-    gap: 50px !important;
-    /* Espacio entre cuadros */
-    margin: 60px auto !important;
-    width: 100% !important;
-    max-width: 1200px !important;
-}
-
-/* 3. El tamaño de cada cuadro individual */
-.product-card {
-    width: 380px !important;
-    /* Tamaño fijo para que se vean iguales */
-    text-align: center !important;
-}
-
+/* --- CONFIGURACIÓN BASE --- */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Helvetica', sans-serif;
-    /* Zara usa tipografías muy limpias */
-}
-
-.hidden {
-    display: none !important;
 }
 
 body {
     background-color: #000;
-    /* Negro total */
     color: #fff;
+    overflow-x: hidden;
 }
 
-/* Sección Hero */
+#bg-video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+    object-fit: cover;
+    filter: brightness(40%);
+}
+
+/* --- HEADER Y LOGO --- */
+header {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding: 20px 8% !important;
+    position: absolute !important;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.logo {
+    width: 320px !important; /* Tamaño de la 'M' gótica */
+}
+
+.logo img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* --- MENÚ NAVEGACIÓN --- */
+.menu {
+    display: flex !important;
+    gap: 40px;
+    align-items: center;
+}
+
+.menu a, .dropbtn {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    letter-spacing: 2px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* --- EFECTO DESPLEGABLE (DROPDOWN) --- */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none; /* Escondido por defecto */
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.95);
+    min-width: 180px;
+    border: 1px solid #333;
+    top: 100%;
+    left: 0;
+    z-index: 10;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    display: block;
+    font-size: 12px;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #1a1a1a;
+    letter-spacing: 4px;
+    transition: 0.3s;
+}
+
+/* Muestra el cuadro al pasar el mouse */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* --- SECCIÓN PRINCIPAL (HERO) --- */
 .hero {
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    background: transparent;
-    /* El video se verá por detrás */
-    width: 100%;
 }
 
 .hero h1 {
     font-size: 5rem;
-    font-family: 'Helvetica', sans-serif;
-    /* O si prefieres la futurista Orbitron, pon esa */
-    font-weight: bold;
     letter-spacing: 15px;
-    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    letter-spacing: 5px;
+    margin-bottom: 30px;
+    color: #ccc;
 }
 
 .btn {
     display: inline-block;
-    margin-top: 20px;
-    padding: 10px 30px;
+    padding: 12px 35px;
     border: 1px solid #fff;
     color: #fff;
     text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 2px;
     transition: 0.3s;
 }
 
 .btn:hover {
-    background-color: #fff;
-    color: #000;
-}
-
-/* Estilos para la página Sobre Nosotros */
-.nosotros-page {
-    background-color: #000;
-    color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-}
-
-.manifiesto-container {
-    max-width: 800px;
-    padding: 150px 20px 50px 20px;
-    /* Espacio para que el header no tape el texto */
-    text-align: center;
-}
-
-/* Introducción (Cochabamba...) */
-/* 3. Letras más gruesas para la introducción */
-.introduccion {
-    font-size: 1.4rem;
-    letter-spacing: 3px;
-    font-weight: 700;
-    /* Grosor máximo */
-    margin-bottom: 50px;
-}
-
-.bloque-info {
-    margin-bottom: 40px;
-}
-
-.bloque-info h2,
-.seccion-valores h2 {
-    font-size: 0.8rem;
-    letter-spacing: 5px;
-    color: #bbb;
-    /* Un gris un poco más claro para que se lea mejor */
-    font-weight: 700;
-}
-
-/* Textos de Misión y Visión */
-/* 4. Letras más gruesas para Misión y Visión */
-.bloque-info p {
-    font-size: 1.1rem;
-    font-weight: 600;
-    /* Más gruesa para que resalte */
-    letter-spacing: 1px;
-    line-height: 1.8;
-}
-
-.valores-grid {
-    margin-top: 80px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    border-top: 1px solid #333;
-    padding-top: 25px;
-}
-
-.valores-grid span {
-    font-size: 0.7rem;
-    letter-spacing: 3px;
-    border: 1px solid #555;
-    padding: 10px 20px;
-    transition: 0.4s;
-}
-
-.valores-grid span:hover {
     background: #fff;
     color: #000;
-}
-
-/* Estilo para el logo en la página de Nosotros */
-/* 2. Subir el logo y quitarle espacio abajo */
-.logo-nosotros img {
-    height: 350px;
-    width: auto;
-    filter: invert(1);
-    margin-top: -40px;
-    /* Sube el logo al techo */
-    margin-bottom: -110px;
-    /* Pega el texto al logo */
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-/* 1. Subir todo el contenido */
-.manifiesto-container {
-    max-width: 900px;
-    padding-top: 20px;
-    /* Reducido para que no haya tanto espacio negro arriba */
-    margin: 0 auto;
-    text-align: center;
-}
-
-/* Subir el botón INICIO a la derecha y hacerlo más grueso */
-.nosotros-page header {
-    display: flex;
-    justify-content: flex-end;
-    padding: 40px 60px;
-    /* Ajusta este padding para subirlo o bajarlo */
-    position: absolute;
-    top: 0;
-    width: 100%;
-}
-
-/* Botón de INICIO */
-.nosotros-page nav ul li a {
-    font-weight: 800;
-    /* Grosor máximo para que destaque arriba */
-    letter-spacing: 3px;
-    font-size: 0.9rem;
-}
-
-/* Quitar la línea blanca y dar estilo al título VALORES */
-/* 5. Quitar la línea de los valores */
-.seccion-valores {
-    margin-top: 60px;
-    border-top: none !important;
-    /* El !important asegura que la línea muera */
-}
-
-.seccion-valores h2 {
-    font-size: 0.8rem;
-    letter-spacing: 5px;
-    color: #888;
-    margin-bottom: 30px;
-}
-
-/* Página de Drop 01 */
-.drop-page {
-    background-color: #000;
-    color: #fff;
-}
-
-.drop-container {
-    padding: 120px 40px 60px;
-    max-width: 1200px;
-    margin: 0 auto;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    /* Esto centra todo horizontalmente */
-    text-align: center;
-    width: 100%;
-}
-
-.drop-header h1 {
-    font-size: 2.5rem;
-    letter-spacing: 8px;
-    margin-bottom: 20px;
-    font-weight: 800;
-}
-
-.drop-header p {
-    font-size: 0.9rem;
-    color: #888;
-    letter-spacing: 2px;
-    margin-bottom: 60px;
-}
-
-/* Grilla de Prototipos */
-.galeria-prototipos {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 40px;
-    margin-bottom: 80px;
-}
-
-.item-prototipo {
-    background: #0a0a0a;
-    /* Un negro ligeramente distinto para que resalte */
-    padding: 20px;
-    border: 1px solid #1a1a1a;
-    transition: 0.5s;
-}
-
-.item-prototipo:hover {
-    border-color: #fff;
-    /* Se ilumina el borde al pasar el mouse */
-}
-
-/* El cuadro base */
-.placeholder-img {
-    width: 100%;
-    height: 450px;
-    /* Le di un poco más de altura para que se vea más imponente */
-    background-color: #0a0a0a;
-    border: 1px solid #1a1a1a;
-    transition: all 0.5s ease;
-    /* Esta es la clave del movimiento suave */
-    margin-bottom: 20px;
-}
-
-.item-prototipo p {
-    font-size: 0.8rem;
-    letter-spacing: 2px;
-    font-weight: 600;
-}
-
-/* Botón de Instagram */
-.btn-ig {
-    display: inline-block;
-    padding: 15px 40px;
-    border: 1px solid #fff;
-    color: #fff;
-    text-decoration: none;
-    font-size: 0.8rem;
-    letter-spacing: 4px;
-    font-weight: 700;
-    transition: 0.4s;
-    margin-top: 20px;
-}
-
-.btn-ig:hover {
-    background: #fff;
-    color: #000;
-}
-
-/* --- SECCIÓN PIE DE PÁGINA DROP 01 --- */
-.aviso-registro {
-    margin-top: 80px;
-    padding-bottom: 60px;
-    text-align: center;
-}
-
-.aviso-registro p {
-    font-size: 0.9rem;
-    letter-spacing: 3px;
-    font-weight: 600;
-    /* Para que se vea más grueso como querías */
-    margin-bottom: 25px;
-    color: #fff;
-    text-transform: uppercase;
-    /* Esto lo pone en mayúsculas automáticamente */
-}
-
-.btn-ig {
-    display: inline-block;
-    padding: 15px 40px;
-    border: 1px solid #fff;
-    color: #fff;
-    text-decoration: none;
-    font-size: 0.8rem;
-    letter-spacing: 4px;
-    font-weight: 700;
-    transition: 0.4s;
-}
-
-.btn-ig:hover {
-    background: #fff;
-    color: #000;
-}
-
-/* Contenedor de los botones sociales */
-.social-links {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    /* Para que en celular se pongan uno debajo del otro si no entran */
-    gap: 15px;
-    margin-top: 20px;
-}
-
-/* Estilo unificado para todos los botones */
-.btn-social {
-    display: inline-block;
-    padding: 12px 25px;
-    border: 1px solid #fff;
-    color: #fff;
-    text-decoration: none;
-    font-size: 0.75rem;
-    letter-spacing: 3px;
-    font-weight: 700;
-    transition: 0.4s;
-    min-width: 140px;
-    /* Para que todos tengan el mismo ancho */
-}
-
-.btn-social:hover {
-    background: #fff;
-    color: #000;
-}
-
-/* LA REACCIÓN AL PASAR EL MOUSE (Hover) */
-.item-prototipo:hover .placeholder-img {
-    border-color: #fff;
-    /* El borde se vuelve blanco puro */
-    background-color: #111;
-    /* El fondo se aclara penitas */
-    transform: translateY(-5px);
-    /* El cuadro sube un poquito, como si flotara */
-    box-shadow: 0 10px 30px rgba(255, 255, 255, 0.05);
-    /* Un brillo muy sutil abajo */
-}
-
-/* También haremos que el texto de la prenda reaccione */
-.item-prototipo:hover p {
-    color: #fff;
-    letter-spacing: 6px;
-    /* Las letras se separan un poco al pasar el mouse */
-    transition: 0.5s;
-}
-
-/* 1. Aseguramos que el menú se vea en línea */
-nav ul {
-    display: flex;
-    list-style: none;
-    gap: 30px;
-    align-items: center;
-}
-
-/* 2. Estilo específico para el contenedor de Colecciones */
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
-
-/* 3. El cuadro que está escondido (Dropdown) */
-.dropdown-content {
-    display: none;
-    /* Aquí se esconde */
-    position: absolute;
-    background-color: #000;
-    /* Fondo negro MANA */
-    min-width: 220px;
-    border: 1px solid #333;
-    /* Un borde sutil */
-    z-index: 1000;
-    top: 100%;
-    left: 0;
-    text-align: left;
-}
-
-/* 4. Los enlaces dentro del cuadro negro */
-.dropdown-content a {
-    color: white;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    font-size: 0.7rem;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-}
-
-/* 5. Qué pasa cuando pasas el mouse por las opciones del cuadro */
-.dropdown-content a:hover {
-    background-color: #111;
-    letter-spacing: 4px;
-    /* Efecto de expansión */
-    color: #fff;
-}
-
-/* 6. ¡ESTO HACE QUE APAREZCA! Al pasar el mouse por COLECCIONES, muestra el cuadro */
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-/* --- ESTILO PARA PC Y MÓVIL (FUERA DE CUALQUIER LLAVE EXTRA) --- */
-
-/* --- CONFIGURACIÓN FINAL DEL HEADER MANA --- */
-/* --- CONFIGURACIÓN DEFINITIVA DEL HEADER MANA --- */
-header {
-    display: flex !important;
-    justify-content: space-between !important; 
-    align-items: center !important; 
-    padding: 15px 6% !important; 
-    position: absolute !important; /* Esto lo pega arriba del video */
-    top: 0 !important;
-    left: 0 !important;
-    width: 100% !important;
-    z-index: 1000 !important;
-    background: transparent !important;
-}
-
-header .logo {
-    display: block !important;
-    width: 300px !important; /* Ajusta este número para agrandar la 'M' */
-    margin: 0 !important;
-}
-
-header .logo img {
-    width: 100% !important;
-    height: auto !important;
-    display: block !important;
-}
-
-nav.menu {
-    display: flex !important;
-    gap: 40px !important; /* Esto separa COLECCIONES de SOBRE NOSOTROS */
-}
-
-nav.menu a {
-    color: white !important;
-    text-decoration: none !important;
-    font-size: 14px !important;
-    letter-spacing: 2px !important;
-    font-weight: bold !important;
 }

@@ -1,148 +1,51 @@
-/* --- BASE --- */
-* { 
-    margin: 0; 
-    padding: 0; 
-    box-sizing: border-box; 
-    font-family: 'Helvetica', sans-serif; 
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', 'Helvetica', sans-serif; }
+body { background-color: #000; color: #fff; overflow-x: hidden; }
+
+#bg-video {
+    position: fixed; right: 0; bottom: 0; min-width: 100%; min-height: 100%;
+    z-index: -1; object-fit: cover; filter: brightness(30%);
 }
 
-body { 
-    background-color: #000; 
-    color: #fff; 
-    overflow-x: hidden; 
-}
-
-/* --- HEADER (Subido al máximo) --- */
-/* --- ESTE BLOQUE SUBE LOS BOTONES AL TECHO --- */
 header {
-    display: flex !important;
-    justify-content: space-between !important;
-    align-items: center !important;
-    padding: 0px 5% !important; /* Cambiamos 5px a 0px para pegarlo al borde */
-    position: fixed !important; 
-    top: 0 !important;
-    width: 100% !important;
-    z-index: 1000 !important;
-    background: transparent !important;
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 20px 5%; position: fixed; top: 0; width: 100%; z-index: 1000;
 }
 
-/* Ajuste fino del logo para que no choque con el borde */
-.logo img { 
-    width: 280px !important; 
-    height: auto !important; 
-    display: block !important;
-    margin-top: -10px !important; /* Lo sube 10 píxeles más */
-}
+.logo img { width: 200px; height: auto; }
 
-/* Menú: Subido y alineado */
-.menu { 
-    display: flex !important; 
-    gap: 45px !important; 
-    margin-top: -15px !important; /* Este valor negativo "jala" los botones hacia arriba */
-}
-
+.menu { display: flex; gap: 40px; }
 .menu a, .dropbtn { 
-    color: white; 
-    text-decoration: none; 
-    font-weight: bold; 
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    font-size: 13px;
-    transition: 0.3s;
+    color: #fff; text-decoration: none; font-size: 12px; 
+    letter-spacing: 3px; text-transform: uppercase; font-weight: 300;
 }
 
-/* --- DROPDOWN --- */
-.dropdown { position: relative; }
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background: rgba(0,0,0,0.95);
-    min-width: 280px;
-    border: 1px solid #222;
-    top: 100%;
-    right: 0; 
-}
-.dropdown:hover .dropdown-content { display: block; }
-.dropdown-content a { padding: 20px; display: block; font-size: 11px; }
-
-/* --- HERO (Botón Próximamente con Resaltado) --- */
+/* HERO SECTION (Igual a Idealane) */
 .hero {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+    height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center;
 }
+
+.subtitle { letter-spacing: 8px; font-size: 14px; color: #888; margin-bottom: 20px; }
 
 .hero h1 { 
-    font-size: 5.5rem; 
-    letter-spacing: 20px; 
-    font-weight: 900;
+    font-size: 3.5rem; line-height: 1.2; letter-spacing: -1px; 
+    font-weight: 200; margin-bottom: 30px; text-transform: uppercase;
 }
 
-.hero p { 
-    letter-spacing: 8px; 
-    margin: 15px 0 40px 0; 
-    color: #aaa; 
+.location { letter-spacing: 5px; font-size: 12px; color: #666; margin-bottom: 40px; }
+
+.btn-main {
+    padding: 15px 40px; border: 1px solid #fff; color: #fff;
+    text-decoration: none; font-size: 12px; letter-spacing: 4px;
+    transition: 0.5s; background: transparent;
 }
 
-/* Estilo del botón central */
-.btn { 
-    border: 1px solid #fff; 
-    padding: 18px 50px; 
-    color: #fff; 
-    text-decoration: none; 
-    font-weight: bold;
-    letter-spacing: 4px;
-    font-size: 12px;
-    transition: 0.4s; /* Para que el cambio de color sea suave */
-}
+.btn-main:hover { background: #fff; color: #000; }
 
-/* EFECTO DE RESALTADO: Se vuelve blanco con letras negras al pasar el mouse */
-.btn:hover {
-    background-color: #fff;
-    color: #000;
+/* DROPDOWN */
+.dropdown { position: relative; }
+.dropdown-content {
+    display: none; position: absolute; background: #000;
+    border: 1px solid #222; min-width: 220px; top: 100%; right: 0;
 }
-/* --- ESTILOS PARA LA PÁGINA DE DROP 01 --- */
-.drop-container {
-    padding-top: 150px; /* Espacio para que el menú no tape el título */
-    text-align: center;
-}
-
-.drop-header h1 {
-    font-size: 3rem;
-    letter-spacing: 10px;
-    margin-bottom: 50px;
-}
-
-.galeria-prototipos {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 40px;
-    padding: 0 8%;
-}
-
-.item-prototipo {
-    text-align: center;
-}
-
-/* El cuadro negro donde irán tus fotos */
-.placeholder-img {
-    width: 100%;
-    height: 400px;
-    background-color: #111; /* Negro ligeramente más claro */
-    border: 1px solid #333;
-    margin-bottom: 15px;
-    transition: 0.4s;
-}
-
-.item-prototipo:hover .placeholder-img {
-    border-color: #fff; /* Se ilumina al pasar el mouse */
-}
-
-.item-prototipo p {
-    font-size: 12px;
-    letter-spacing: 3px;
-    color: #888;
-}
+.dropdown:hover .dropdown-content { display: block; }
+.dropdown-content a { padding: 15px; display: block; font-size: 10px; }

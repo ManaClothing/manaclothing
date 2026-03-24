@@ -5,10 +5,10 @@ body { background-color: #000; color: #fff; overflow-x: hidden; }
     position: fixed; right: 0; bottom: 0; min-width: 100%; min-height: 100%;
     z-index: -1; object-fit: cover; filter: brightness(30%);
 }
-
 header {
-    position: absolute; /* Cambia 'fixed' por 'absolute' para que se quede arriba */
+    position: absolute; /* Esto hace que se quede al inicio de la página y no baje */
     top: 0;
+    left: 0;
     width: 100%;
     z-index: 1000;
     display: flex;
@@ -181,7 +181,7 @@ header {
 }
 
 /* El contenedor de la imagen: ELIMINAMOS EL FONDO BLANCO AQUÍ */
-.minimal-gallery .image-wrapper {
+.minimal-gallery {
     width: 100%;
     height: auto; 
     background-color: transparent !important; /* Elimina cualquier rastro de gris */
@@ -191,46 +191,60 @@ header {
     justify-content: center;
     margin-bottom: 20px;
 }
+.image-wrapper {
+    background: none !important; /* Quita el fondo */
+    background-color: transparent !important; /* Refuerza la transparencia */
+    border: none !important; /* Quita bordes */
+    box-shadow: none !important; /* Quita sombras */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 0;
+    margin-bottom: 20px;
+}
 /* La imagen de la polera en sí */
-.minimal-gallery .product-image {
+.minimal-gallery {
     max-width: 100%;
     height: auto;
     filter: drop-shadow(0 0 10px rgba(0,0,0,0.5)); /* Sombra suave solo a la polera */
 }
-
+.product-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
 /* Sección de texto (Información) */
 .product-info {
-    text-align: left;
-    margin-top: 15px;
+    text-align: center; /* Centra todo el bloque de texto */
+    width: 100%;
 }
-
 .product-info h3 {
     font-size: 14px;
     letter-spacing: 2px;
     color: #fff;
     margin-bottom: 10px;
+    text-transform: uppercase;
 }
-
 .product-info .price {
-    font-size: 16px;
+    font-size: 18px;
     font-weight: bold;
     color: #fff;
     margin-bottom: 20px;
 }
-
 /* El enlace "VER DETALLES" */
 .ver-detalles {
-    display: block;
-    border-top: 1px solid #fff; /* La línea blanca que pediste */
+    display: inline-block; /* Cambiado a inline-block para que la línea no ocupe todo el ancho si no quieres */
+    width: 80%; /* Ajusta el ancho de la línea divisoria */
+    border-top: 1px solid #fff; 
     padding-top: 15px;
     font-size: 11px;
     letter-spacing: 3px;
-    text-align: left;
     color: #fff;
     text-decoration: none;
     text-transform: uppercase;
+    margin: 0 auto; /* Centra el bloque */
 }
-
 .ver-detalles:hover {
     color: #aaa; /* Cambiar a gris al pasar el mouse */
 }

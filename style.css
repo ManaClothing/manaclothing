@@ -295,3 +295,53 @@ header {
     text-transform: uppercase;
     font-family: sans-serif; /* O la fuente que estés usando */
 }
+/* --- ADAPTACIÓN PARA CELULARES --- */
+@media (max-width: 768px) {
+    
+    /* 1. Ajustar el Menú */
+    header {
+        padding: 20px;
+        flex-direction: column; /* Logo arriba, links abajo */
+        gap: 15px;
+    }
+    
+    .menu {
+        gap: 15px;
+        font-size: 12px;
+    }
+
+    /* 2. Ajustar Títulos Gigantes */
+    .historia-section h1, .drop-title {
+        font-size: 3rem !important; /* Más pequeño para que no se corte */
+        letter-spacing: 8px !important;
+    }
+
+    /* 3. Ajustar la Galería del DROP 01 */
+    .minimal-gallery {
+        gap: 40px; /* Menos espacio entre poleras */
+        padding: 100px 5%;
+    }
+
+    .product-item {
+        width: 100%; /* Que la polera ocupe casi todo el ancho del cel */
+        max-width: 320px;
+    }
+
+    .image-wrapper {
+        height: 350px !important; /* Menos alto para que no haya que hacer tanto scroll */
+    }
+
+    /* 4. Ajustar Sobre Nosotros */
+    .historia-texto p {
+        font-size: 1.1rem;
+        padding: 0 20px;
+    }
+
+    .valor-card h3 {
+        font-size: 1.8rem;
+    }
+
+    .lista-vertical li {
+        font-size: 1.4rem;
+    }
+}

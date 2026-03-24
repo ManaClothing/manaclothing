@@ -5,42 +5,27 @@
     <title>MANA | DROP 01</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="drop-page">
+<body style="background: #000;">
     <header>
-        <div class="logo">
-            <img src="LOGO-MANA-BLANCO.png" alt="MANA Logo">
-        </div>
+        <div class="logo"><img src="LOGO-MANA-BLANCO.png" alt="MANA Logo"></div>
         <nav class="menu">
             <a href="index.html">INICIO</a>
-            <div class="dropdown">
-                <a href="#" class="dropbtn">COLECCIONES</a>
-                <div class="dropdown-content">
-                    <a href="drop01.html">DROP 01: LA PRIMERA HUELLA</a>
-                    <a href="#">PRÓXIMAMENTE</a>
-                </div>
-            </div>
             <a href="nosotros.html">SOBRE NOSOTROS</a>
         </nav>
     </header>
 
-    <main class="drop-container">
-        <div class="drop-header">
-            <h1>DROP 01</h1>
-            <p>LA PRIMERA HUELLA - COCHABAMBA 2026</p>
-        </div>
-
-        <div class="galeria-prototipos">
-            <div class="item-prototipo">
-                <div class="placeholder-img"></div>
-                <p>PRENDA 01 - PROTOTIPO</p>
+    <main style="padding-top: 150px; text-align: center;">
+        <h1 style="font-weight: 200; letter-spacing: 15px; font-size: 3rem;">DROP 01</h1>
+        <p style="color: #555; letter-spacing: 5px; margin-bottom: 80px;">LA PRIMERA HUELLA</p>
+        
+        <div style="display: flex; justify-content: center; gap: 40px; flex-wrap: wrap;">
+            <div class="item">
+                <div style="width: 400px; height: 500px; background: #0a0a0a; border: 1px solid #1a1a1a; margin-bottom: 20px;"></div>
+                <p style="letter-spacing: 3px; font-size: 12px;">POLERA PROTOTIPO 01</p>
             </div>
-            <div class="item-prototipo">
-                <div class="placeholder-img"></div>
-                <p>PRENDA 02 - PROTOTIPO</p>
-            </div>
-            <div class="item-prototipo">
-                <div class="placeholder-img"></div>
-                <p>PRENDA 03 - PROTOTIPO</p>
+            <div class="item">
+                <div style="width: 400px; height: 500px; background: #0a0a0a; border: 1px solid #1a1a1a; margin-bottom: 20px;"></div>
+                <p style="letter-spacing: 3px; font-size: 12px;">POLERA PROTOTIPO 02</p>
             </div>
         </div>
     </main>

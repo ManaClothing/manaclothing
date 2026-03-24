@@ -122,39 +122,8 @@ header {
     margin-top: 80px;
 }
 
-.product-card {
-    background-color: #fff;
-    border-radius: 8px; /* Bordes un poco menos redondeados para que sea más "street" */
-    width: 320px; /* Reduje el ancho para que se vea más estilizado */
-    padding: 15px;
-    display: flex;
-    flex-direction: column;
-    text-decoration: none;
-    color: #000;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
-    transition: 0.3s ease;
-    margin-bottom: 20px;
-}
-.product-image-container {
-    width: 100%;
-    /* Ajustamos la altura para que coincida con la proporción 4:5 de tus fotos */
-    height: 380px; 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    margin-bottom: 15px;
-    background-color: #f9f9f9; /* Un gris casi blanco muy sutil para el fondo del cuadro */
-    border-radius: 4px;
-}
 .product-card:hover {
     transform: translateY(-5px); /* Pequeño salto al pasar el mouse */
-}
-
-.product-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Esto hará que la foto ocupe todo el cuadro sin dejar espacios vacíos */
 }
 
 /* Información del producto */
@@ -175,19 +144,94 @@ header {
     margin-bottom: 15px;
 }
 
-.ver-producto {
-    display: block;
-    font-size: 11px;
-    letter-spacing: 3px;
-    border-top: 1px solid #eee;
-    padding-top: 15px;
-    text-transform: uppercase;
-    font-weight: 500;
-}
-
-/* Etiquetas (New Drop, Oversize) */
-.product-badge { display: none; }
-
 .product-badge.top-left { top: 20px; left: 20px; }
 .product-badge.top-right { top: 20px; right: 20px; }
 .product-badge.red { background-color: #a00; } /* Fondo rojo */
+/* --- NUEVA GALERÍA MINIMALISTA PARA DROP 01 --- */
+
+/* Contenedor principal de la galería */
+.minimal-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 80px; /* Espacio grande entre poleras */
+    padding: 100px 10%; /* Mucho aire arriba y abajo */
+    flex-wrap: wrap;
+    background-color: #121212; /* Fondo muy oscuro, como en la imagen */
+}
+
+/* El enlace que envuelve todo el ítem (imagen, texto, precio) */
+.product-item {
+    width: 380px; /* Ancho cómodo para cada ítem */
+    display: flex;
+    flex-direction: column;
+    text-decoration: none; /* Quitar subrayado de los links */
+    transition: transform 0.3s ease; /* Pequeño salto al pasar el mouse */
+    cursor: pointer;
+}
+
+.product-item:hover {
+    transform: translateY(-5px);
+}
+
+/* El contenedor de la imagen: ELIMINAMOS EL FONDO BLANCO AQUÍ */
+.minimal-gallery .image-wrapper {
+    width: 100%;
+    height: 500px; /* Altura generosa para la polera, como en la imagen */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 25px;
+    background-color: transparent; /* CLAVE: Fondo transparente */
+    border: none; /* CLAVE: Sin bordes */
+    border-radius: 0; /* CLAVE: Sin esquinas redondeadas */
+    box-shadow: none; /* CLAVE: Sin sombra */
+    padding: 0; /* Sin espacio interno */
+}
+
+/* La imagen de la polera en sí */
+.minimal-gallery .product-image {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; /* Ajustar sin deformar ni recortar */
+}
+
+/* Sección de texto (Información) */
+.product-info {
+    text-align: left; /* Alineación a la izquierda */
+    color: #fff; /* CLAVE: Texto blanco sobre fondo oscuro */
+    padding-bottom: 30px;
+}
+
+.product-info h3 {
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    color: #fff; /* Asegurar texto blanco */
+}
+
+.product-info .price {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 25px;
+    color: #fff; /* Asegurar texto blanco */
+}
+
+/* El enlace "VER DETALLES" */
+.ver-detalles {
+    display: block;
+    font-size: 12px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: #fff; /* Texto blanco */
+    padding-top: 20px;
+    border-top: 1px solid #fff; /* CLAVE: Línea divisoria blanca */
+    width: 100%;
+    text-align: center; /* Centrar el texto en su línea */
+}
+
+.ver-detalles:hover {
+    color: #aaa; /* Cambiar a gris al pasar el mouse */
+}

@@ -2,30 +2,38 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>MANA | Inicio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MANA | Honor a nuestras raíces</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <video autoplay muted loop id="bg-video">
+        <source src="https://cdn.pixabay.com/video/2021/09/10/88137-603417726_large.mp4" type="video/mp4">
+    </video>
+
     <header>
-    <div class="logo">
-        <img src="LOGO-MANA-BLANCO.png" alt="MANA Logo">
-    </div>
-    <nav class="menu">
-        <div class="dropdown">
-            <a href="#" class="dropbtn">COLECCIONES</a>
-            <div class="dropdown-content">
-                <a href="drop01.html">DROP 01: LA PRIMERA HUELLA</a>
-                <a href="#">PRÓXIMAMENTE</a>
-            </div>
+        <div class="logo">
+            <img src="LOGO-MANA-BLANCO.png" alt="MANA Logo">
         </div>
-        <a href="nosotros.html">SOBRE NOSOTROS</a>
-    </nav>
-</header>
+        <nav class="menu">
+            <a href="index.html">INICIO</a>
+            <div class="dropdown">
+                <a href="#" class="dropbtn">COLECCIONES</a>
+                <div class="dropdown-content">
+                    <a href="drop01.html">DROP 01: LA PRIMERA HUELLA</a>
+                </div>
+            </div>
+            <a href="nosotros.html">SOBRE NOSOTROS</a>
+        </nav>
+    </header>
 
     <section class="hero">
-        <h1>ESTÉTICA URBANA</h1>
-        <p>COCHABAMBA 2026</p>
-        <a href="#" class="btn">PRÓXIMAMENTE</a>
+        <div class="hero-content">
+            <p class="subtitle">ESTÉTICA URBANA</p>
+            <h1>HONOR A NUESTRAS RAÍCES,<br>ESTILO PARA NUESTRAS CALLES.</h1>
+            <p class="location">COCHABAMBA 2026</p>
+            <a href="drop01.html" class="btn-main">VER COLECCIÓN</a>
+        </div>
     </section>
 </body>
 </html>

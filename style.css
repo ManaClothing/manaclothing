@@ -73,14 +73,21 @@ header {
     margin: 0 auto;
     text-align: center;
 }
-
 .historia-section h1 {
-    font-size: 4rem;
-    letter-spacing: 20px;
-    font-weight: 200;
-    margin-bottom: 30px;
+    font-size: 6rem;
+    font-weight: 900; /* Super grueso */
+    letter-spacing: 15px;
+    color: #fff;
+    margin: 20px 0;
+    text-transform: uppercase;
 }
-
+.historia-texto p {
+    font-size: 1.4rem;
+    font-weight: 600; /* Texto más grueso y visible */
+    line-height: 1.8;
+    color: #fff;
+    margin-bottom: 25px;
+}
 .historia-texto {
     max-width: 800px;
     margin: 0 auto 80px;
@@ -90,34 +97,49 @@ header {
 }
 
 .valores-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 40px;
-    margin-top: 50px;
+    display: flex;
+    flex-direction: column; /* Esto los pone uno debajo del otro */
+    align-items: center;
+    gap: 60px;
+    margin-top: 100px;
+    padding-bottom: 100px;
 }
-
 .valor-card {
-    padding: 40px;
-    border: 1px solid #222;
-    transition: 0.3s;
+    text-align: center;
+    max-width: 700px;
 }
-
 .valor-card:hover {
     border-color: #fff;
     background: #0a0a0a;
 }
-
 .valor-card h3 {
-    letter-spacing: 4px;
-    font-size: 14px;
-    margin-bottom: 20px;
+    font-size: 2.2rem;
+    font-weight: 800; /* Muy grueso */
+    letter-spacing: 6px;
     color: #fff;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #fff; /* Línea decorativa abajo del título */
+    display: inline-block;
+    padding-bottom: 10px;
 }
-
 .valor-card p {
-    color: #888;
-    font-size: 13px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #ddd;
     line-height: 1.6;
+}
+.lista-vertical {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+.lista-vertical li {
+    font-size: 1.8rem;
+    font-weight: 900; /* Valores con mucha fuerza */
+    letter-spacing: 4px;
+    color: #fff;
+    margin-bottom: 15px;
+    text-transform: uppercase;
 }
 /* --- NUEVOS ESTILOS PARA TARJETAS DE PRODUCTO --- */
 .galeria-poleras {

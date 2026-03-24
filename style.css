@@ -18,7 +18,9 @@ header {
     color: #fff; text-decoration: none; font-size: 13px; 
     letter-spacing: 3px; text-transform: uppercase; font-weight: 600;transition: 0.3s ease; /* Para que al pasar el mouse el efecto sea suave */
 }
-
+.menu a:hover, .dropdown:hover .dropbtn {
+    color: #aaa;
+}
 /* HERO SECTION (Igual a Idealane) */
 .hero {
     height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center;

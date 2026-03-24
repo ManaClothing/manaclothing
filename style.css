@@ -36,6 +36,7 @@ header {
 /* HERO SECTION (Igual a Idealane) */
 .hero {
     height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center;
+    padding-top: 150px; /* Esto empuja el texto hacia abajo */
 }
 
 .subtitle { letter-spacing: 8px; font-size: 14px; color: #888; margin-bottom: 20px; }
@@ -68,7 +69,7 @@ header {
 .dropdown-content a { padding: 15px; display: block; font-size: 10px; }
 /* --- PÁGINA SOBRE NOSOTROS --- */
 .nosotros-container {
-    padding: 150px 10% 100px;
+    padding: 220px 10% 100px;
     max-width: 1200px;
     margin: 0 auto;
     text-align: center;
@@ -287,7 +288,8 @@ header {
 }
 .drop-title {
     color: #fff;
-    font-size: 3.5rem;      /* Un poco más grande */
+    font-size: 3.5rem;  /* Un poco más grande */
+    margin-top: 150px;
     font-weight: 900;       /* EL MÁS GRUESO */
     letter-spacing: 12px;   /* Espaciado elegante */
     text-align: center;
@@ -345,3 +347,7 @@ header {
         font-size: 1.4rem;
     }
 }
+/* Esto va dentro del @media (max-width: 768px) */
+    .hero { padding-top: 200px; }
+    .nosotros-container { padding-top: 250px; }
+    .drop-title { margin-top: 200px; }

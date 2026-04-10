@@ -5,22 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MANA | Nuestra Historia</title>
     <link rel="stylesheet" href="style.css">
-  <style>
+    <style>
+        /* ESTILOS ESPECÍFICOS PARA ESTA PÁGINA */
+        body {
+            background: #000;
+            margin: 0;
+            color: #fff;
+            font-family: sans-serif; /* O la que uses en tu style.css */
+        }
+
         .nosotros-container {
             padding-top: 150px;
             text-align: center;
-            max-width: 1100px; /* Un poco más ancho para que respire mejor */
+            max-width: 1100px;
             margin: 0 auto;
-            color: #fff;
-            background: #000;
         }
 
-        /* LOGO MÁS GRANDE */
+        /* LOGO PRINCIPAL DE LA HISTORIA */
         .logo-historia {
-            width: 550px; /* Lo aumentamos considerablemente */
+            width: 550px;
             height: auto;
             margin-bottom: 50px;
-            filter: drop-shadow(0 0 10px rgba(255,255,255,0.05)); /* Sutil resalte */
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .subtitle {
@@ -54,24 +62,22 @@
         .valor-card {
             flex: 1;
             min-width: 280px;
-            border: none;
-            padding: 20px;
             text-align: center;
         }
 
-        /* Títulos MISIÓN y VISIÓN: Más grandes y pesados */
+        /* Títulos MISIÓN y VISIÓN */
         .valor-card h3 {
-            font-weight: 900; /* Grosor máximo */
+            font-weight: 900;
             letter-spacing: 6px;
             margin-bottom: 25px;
-            font-size: 1.8rem; /* Aumentado de 1.5 a 1.8 */
+            font-size: 1.8rem;
             color: #fff;
             text-transform: uppercase;
         }
 
-        /* Título VALORES: Solo un poco más grueso (usamos una clase específica) */
+        /* Título VALORES con grosor especial */
         .titulo-valores {
-            font-weight: 800 !important; /* Más grueso pero sin cambiar el tamaño drásticamente */
+            font-weight: 800 !important;
         }
 
         .valor-card p {
@@ -95,6 +101,24 @@
             margin-bottom: 15px;
         }
     </style>
+</head>
+<body class="nosotros-page">
+
+    <header>
+        <div class="logo">
+            <img src="LOGO-MANA-BLANCO.png" alt="MANA Logo">
+        </div>
+        <nav class="menu">
+            <a href="index.html">INICIO</a>
+            <div class="dropdown">
+                <a href="#" class="dropbtn">COLECCIONES</a>
+                <div class="dropdown-content">
+                    <a href="drop01.html">DROP 01: LA PRIMERA HUELLA</a>
+                </div>
+            </div>
+            <a href="nosotros.html">SOBRE NOSOTROS</a>
+        </nav>
+    </header>
 
     <main class="nosotros-container">
         <section class="historia-section">

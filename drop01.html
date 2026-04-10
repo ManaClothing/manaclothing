@@ -5,27 +5,58 @@
     <title>MANA | DROP 01</title>
     <link rel="stylesheet" href="style.css">
     <style>
-    /* Buscamos el contenedor de la polera */
-    .item-polera {
-        display: inline-block;
-        transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94); /* Movimiento fluido */
-        text-decoration: none;
-    }
+        /* Efecto de elevación para las poleras */
+        .item-polera {
+            display: inline-block;
+            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            text-decoration: none;
+            color: inherit;
+            text-align: center;
+        }
 
-    /* Cuando el mouse entra al área */
-    .item-polera:hover {
-        transform: translateY(-20px); /* Se eleva 20px */
-        filter: brightness(1.1); /* Brilla un poquito */
-    }
+        .item-polera:hover {
+            transform: translateY(-20px);
+            filter: brightness(1.1);
+        }
 
-    /* Sombra opcional para que se vea real */
-    .item-polera:hover .foto-placeholder {
-        box-shadow: 0px 30px 60px rgba(255, 255, 255, 0.15);
-        border-color: #444;
-    }
-</style>
+        .item-polera:hover .foto-placeholder {
+            box-shadow: 0px 30px 60px rgba(255, 255, 255, 0.15);
+            border-color: #444;
+        }
+
+        /* Centrado del título y subtítulo */
+        .drop-header {
+            text-align: center;
+            padding-top: 150px;
+            margin-bottom: 80px;
+        }
+
+        .drop-header h1 {
+            color: #fff;
+            font-weight: 200;
+            letter-spacing: 15px; /* Devuelve el ancho a las letras */
+            margin: 0;
+            font-size: 3rem;
+            text-transform: uppercase;
+        }
+
+        .drop-header p {
+            color: #555;
+            letter-spacing: 5px;
+            margin-top: 15px;
+            font-size: 0.9rem;
+        }
+
+        .galeria-poleras {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            flex-wrap: wrap;
+            padding-bottom: 100px;
+        }
+    </style>
 </head>
-<body class="drop-page">
+<body class="drop-page" style="background: #000; margin: 0;">
     <header>
         <div class="logo">
             <img src="LOGO-MANA-BLANCO.png" alt="MANA Logo">
@@ -47,22 +78,26 @@
             <h1>DROP 01</h1>
             <p>LA PRIMERA HUELLA - PROTOTIPOS 2026</p>
         </div>
-<div class="galeria-poleras">
-    <a href="producto-negra.html" class="item-polera" style="text-decoration: none; color: inherit;">
-        <div class="foto-placeholder" style="width: 450px; height: 600px; background: #000; border: 1px solid #222; overflow: hidden; display: flex;">
-            <img src="polera-negra.png" alt="Polera Cóndor Tribal" style="width: 100%; height: 100%; object-fit: cover; object-position: center; display: block;">
-        </div>
-        <h3 style="margin-top: 20px; letter-spacing: 3px;">POLERA OVERSIZE CÓNDOR TRIBAL</h3>
-        <p style="letter-spacing: 3px; margin: 10px 0;">150 Bs.</p>
-        <span style="color: #555; font-size: 12px; letter-spacing: 2px;">VER DETALLES</span>
-    </a>
 
-    <a href="producto-blanca.html" class="item-polera" style="text-decoration: none; color: inherit;">
-        <div class="foto-placeholder" style="width: 450px; height: 600px; background: #000; border: 1px solid #222; overflow: hidden; display: flex;">
-            <img src="polera-blanca.png" alt="Polera Blanca Qué Pues!" style="width: 100%; height: 100%; object-fit: cover; object-position: center; display: block;">
+        <div class="galeria-poleras">
+            <a href="producto-negra.html" class="item-polera">
+                <div class="foto-placeholder" style="width: 450px; height: 600px; background: #000; border: 1px solid #222; overflow: hidden; display: flex;">
+                    <img src="polera-negra.png" alt="Polera Cóndor Tribal" style="width: 100%; height: 100%; object-fit: cover; object-position: center; display: block;">
+                </div>
+                <h3 style="margin-top: 20px; letter-spacing: 3px;">POLERA OVERSIZE CÓNDOR TRIBAL</h3>
+                <p style="letter-spacing: 3px; margin: 10px 0;">150 Bs.</p>
+                <span style="color: #555; font-size: 12px; letter-spacing: 2px;">VER DETALLES</span>
+            </a>
+
+            <a href="producto-blanca.html" class="item-polera">
+                <div class="foto-placeholder" style="width: 450px; height: 600px; background: #000; border: 1px solid #222; overflow: hidden; display: flex;">
+                    <img src="polera-blanca.png" alt="Polera Blanca Qué Pues!" style="width: 100%; height: 100%; object-fit: cover; object-position: center; display: block;">
+                </div>
+                <h3 style="margin-top: 20px; letter-spacing: 3px;">POLERA BOXYFIT BLANCA QUÉ PUES!</h3>
+                <p style="letter-spacing: 3px; margin: 10px 0;">130 Bs.</p>
+                <span style="color: #555; font-size: 12px; letter-spacing: 2px;">VER DETALLES</span>
+            </a>
         </div>
-        <h3 style="margin-top: 20px; letter-spacing: 3px;">POLERA BOXYFIT BLANCA QUÉ PUES!</h3>
-        <p style="letter-spacing: 3px; margin: 10px 0;">130 Bs.</p>
-        <span style="color: #555; font-size: 12px; letter-spacing: 2px;">VER DETALLES</span>
-    </a>
-</div>
+    </main>
+</body>
+</html>

@@ -6,23 +6,60 @@
     <title>MANA | Honor a nuestras raíces</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        /* Ajuste para subir el contenido */
+        /* Ajuste para subir el contenido y dar grosor */
         .hero {
             display: flex;
             justify-content: center;
-            align-items: center; /* Esto lo centra verticalmente */
+            align-items: center;
             height: 100vh;
         }
 
         .hero-content {
-            margin-top: -100px; /* Este margen negativo empuja todo el bloque hacia arriba */
+            margin-top: -120px; /* Un poco más arriba para compensar el peso visual */
             text-align: center;
+            color: #fff;
         }
 
-        /* Opcional: Para que el botón no se vea pegado al texto */
+        /* Grosor para el subtítulo superior */
+        .subtitle {
+            letter-spacing: 6px;
+            font-weight: 600; /* Más grueso */
+            font-size: 1rem;
+            margin-bottom: 10px;
+        }
+
+        /* Grosor para el titular principal (Letras grandes) */
+        .hero-content h1 {
+            letter-spacing: 10px;
+            line-height: 1.1;
+            font-weight: 800; /* Grosor máximo para impacto */
+            font-size: 3.8rem;
+            text-transform: uppercase;
+            margin: 20px 0;
+        }
+
+        /* Grosor para la ubicación */
+        .location {
+            letter-spacing: 4px;
+            font-weight: 500; /* Grosor medio */
+            color: #bbb;
+            margin-bottom: 40px;
+        }
+
+        /* Ajuste del botón para que combine */
         .btn-main {
-            margin-top: 30px;
-            display: inline-block;
+            font-weight: 700;
+            letter-spacing: 3px;
+            padding: 15px 40px;
+            border: 2px solid #fff;
+            text-decoration: none;
+            color: #fff;
+            transition: all 0.3s ease;
+        }
+
+        .btn-main:hover {
+            background: #fff;
+            color: #000;
         }
     </style>
 </head>
@@ -49,9 +86,9 @@
 
     <section class="hero">
         <div class="hero-content">
-            <p class="subtitle" style="letter-spacing: 5px;">ESTÉTICA URBANA</p>
-            <h1 style="letter-spacing: 8px; line-height: 1.2;">HONOR A NUESTRAS RAÍCES,<br>ESTILO PARA NUESTRAS CALLES.</h1>
-            <p class="location" style="letter-spacing: 3px; color: #888;">COCHABAMBA 2026</p>
+            <p class="subtitle">ESTÉTICA URBANA</p>
+            <h1>HONOR A NUESTRAS RAÍCES,<br>ESTILO PARA NUESTRAS CALLES.</h1>
+            <p class="location">COCHABAMBA 2026</p>
             <a href="drop01.html" class="btn-main">VER COLECCIÓN</a>
         </div>
     </section>

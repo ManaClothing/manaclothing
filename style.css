@@ -393,3 +393,18 @@ header {
     background: #fff;
     color: #000;
 }
+/* Efecto para que el cuadro se eleve */
+.item-polera {
+    transition: transform 0.4s ease, box-shadow 0.4s ease; /* Hace que el movimiento sea suave */
+    cursor: pointer;
+}
+
+.item-polera:hover {
+    transform: translateY(-15px); /* Eleva la imagen 15 pixeles hacia arriba */
+}
+
+/* Efecto opcional: resalte en la imagen */
+.item-polera:hover .foto-placeholder {
+    border-color: #fff; /* El borde se vuelve blanco brillante al pasar el mouse */
+    box-shadow: 0px 20px 40px rgba(255, 255, 255, 0.1); /* Crea una sombra suave abajo */
+}

@@ -55,19 +55,40 @@ header {
 }
 
 .btn-main:hover { background: #fff; color: #000; }
-
 /* DROPDOWN */
 .dropdown {
     position: relative;
-    display: inline-block; /* Asegura que el botón se comporte bien */
+    display: inline-block;
+    padding-bottom: 20px; /* Crea un "puente" invisible para que no se cierre el menú al bajar el mouse */
+    margin-bottom: -20px; /* Compensa el padding para no mover otros elementos */
 }
+
 .dropdown-content {
-    display: none; position: absolute; background: #000;
-    border: 1px solid #222; min-width: 220px; top: 100%; right: 0;
+    display: none; 
+    position: absolute; 
+    background: #000;
+    border: 1px solid #222; 
+    min-width: 250px; 
+    top: 140%; /* <--- Cambiamos de 120% a 140% para que baje un poco más */
+    right: 0;
+    z-index: 100; /* Asegura que salga por encima de todo */
 }
-.dropdown:hover .dropdown-content { display: block; }
-.dropdown-content a { padding: 15px; display: block; font-size: 10px; }
-/* --- PÁGINA SOBRE NOSOTROS --- */
+
+.dropdown:hover .dropdown-content { 
+    display: block; 
+}
+
+.dropdown-content a { 
+    padding: 15px; 
+    display: block; 
+    font-size: 10px; 
+    letter-spacing: 2px; /* Un toque de estilo para que combine con Mana */
+    transition: background 0.3s;
+}
+
+.dropdown-content a:hover {
+    background: #111; /* Un efecto sutil al pasar el mouse por las opciones */
+}
 .nosotros-container {
     padding: 220px 10% 100px;
     max-width: 1200px;

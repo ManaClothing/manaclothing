@@ -5,6 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MANA | Honor a nuestras raíces</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Ajuste para subir el contenido */
+        .hero {
+            display: flex;
+            justify-content: center;
+            align-items: center; /* Esto lo centra verticalmente */
+            height: 100vh;
+        }
+
+        .hero-content {
+            margin-top: -100px; /* Este margen negativo empuja todo el bloque hacia arriba */
+            text-align: center;
+        }
+
+        /* Opcional: Para que el botón no se vea pegado al texto */
+        .btn-main {
+            margin-top: 30px;
+            display: inline-block;
+        }
+    </style>
 </head>
 <body>
     <video autoplay muted loop id="bg-video">
@@ -29,9 +49,9 @@
 
     <section class="hero">
         <div class="hero-content">
-            <p class="subtitle">ESTÉTICA URBANA</p>
-            <h1>HONOR A NUESTRAS RAÍCES,<br>ESTILO PARA NUESTRAS CALLES.</h1>
-            <p class="location">COCHABAMBA 2026</p>
+            <p class="subtitle" style="letter-spacing: 5px;">ESTÉTICA URBANA</p>
+            <h1 style="letter-spacing: 8px; line-height: 1.2;">HONOR A NUESTRAS RAÍCES,<br>ESTILO PARA NUESTRAS CALLES.</h1>
+            <p class="location" style="letter-spacing: 3px; color: #888;">COCHABAMBA 2026</p>
             <a href="drop01.html" class="btn-main">VER COLECCIÓN</a>
         </div>
     </section>

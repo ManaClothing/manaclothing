@@ -5,8 +5,94 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MANA | Nuestra Historia</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* AJUSTES DE GROSOR Y DISEÑO PARA "NOSOTROS" */
+        .nosotros-container {
+            padding-top: 150px;
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto;
+            color: #fff;
+            background: #000;
+        }
+
+        /* Subtítulo superior (NUESTRO ORIGEN) */
+        .subtitle {
+            letter-spacing: 8px;
+            font-weight: 500; /* Grosor medio */
+            color: #888;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+        }
+
+        /* Título Principal (MANA) - Ahora menos grueso */
+        .nosotros-container h1 {
+            font-weight: 300; /* Fino y elegante */
+            letter-spacing: 20px;
+            font-size: 4rem;
+            margin: 0 0 40px 0;
+        }
+
+        /* Párrafos de la historia */
+        .historia-texto p {
+            font-weight: 200; /* Letra bien delgada */
+            line-height: 1.8;
+            letter-spacing: 1px;
+            font-size: 1.1rem;
+            color: #ccc;
+            margin-bottom: 25px;
+        }
+
+        .historia-texto strong {
+            font-weight: 500; /* Resalta un poco Bolivia y Mana sin exagerar */
+            color: #fff;
+        }
+
+        /* Cuadros de Misión, Visión, Valores */
+        .valores-grid {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 80px;
+            flex-wrap: wrap;
+            padding-bottom: 100px;
+        }
+
+        .valor-card {
+            flex: 1;
+            min-width: 250px;
+            border: 1px solid #222;
+            padding: 30px;
+            transition: border 0.3s ease;
+        }
+
+        /* Títulos de los cuadros (MISIÓN, VISIÓN, VALORES) */
+        .valor-card h3 {
+            font-weight: 400; /* Menos grueso */
+            letter-spacing: 5px;
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+            color: #fff;
+        }
+
+        .valor-card p, .lista-vertical li {
+            font-weight: 200; /* Texto interno bien fino */
+            color: #aaa;
+            line-height: 1.6;
+            list-style: none;
+            letter-spacing: 1px;
+        }
+
+        .lista-vertical {
+            padding: 0;
+        }
+
+        .lista-vertical li {
+            margin-bottom: 10px;
+        }
+    </style>
 </head>
-<body class="nosotros-page">
+<body class="nosotros-page" style="background: #000; margin: 0;">
     <header>
         <div class="logo">
             <img src="LOGO-MANA-BLANCO.png" alt="MANA Logo">
@@ -32,25 +118,26 @@
                 <p>El nombre rinde homenaje a mi abuelita, a quien cariñosamente llamábamos <strong>Mana</strong>. Ella es el pilar de este proyecto que busca llevar nuestras raíces a las calles del mundo.</p>
             </div>
         </section>
-<section class="valores-grid">
-    <div class="valor-card">
-        <h3>MISIÓN</h3>
-        <p>Crear una tienda de ropa versátil que represente la identidad boliviana a través de diversos estilos urbanos, ofreciendo calidad y diseño con historia.</p>
-    </div>
-    <div class="valor-card">
-        <h3>VISIÓN</h3>
-        <p>Ser el referente de la moda urbana en Bolivia, demostrando que nuestras raíces pueden convivir con las tendencias globales en cada prenda.</p>
-    </div>
-    <div class="valor-card">
-        <h3>VALORES</h3>
-        <ul class="lista-vertical">
-            <li>IDENTIDAD</li>
-            <li>RESPETO</li>
-            <li>CREATIVIDAD</li>
-            <li>HERENCIA FAMILIAR</li>
-        </ul>
-    </div>
-</section>
+
+        <section class="valores-grid">
+            <div class="valor-card">
+                <h3>MISIÓN</h3>
+                <p>Crear una tienda de ropa versátil que represente la identidad boliviana a través de diversos estilos urbanos, ofreciendo calidad y diseño con historia.</p>
+            </div>
+            <div class="valor-card">
+                <h3>VISIÓN</h3>
+                <p>Ser el referente de la moda urbana en Bolivia, demostrando que nuestras raíces pueden convivir con las tendencias globales en cada prenda.</p>
+            </div>
+            <div class="valor-card">
+                <h3>VALORES</h3>
+                <ul class="lista-vertical">
+                    <li>IDENTIDAD</li>
+                    <li>RESPETO</li>
+                    <li>CREATIVIDAD</li>
+                    <li>HERENCIA FAMILIAR</li>
+                </ul>
+            </div>
+        </section>
     </main>
 </body>
 </html>

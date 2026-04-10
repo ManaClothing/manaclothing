@@ -4,6 +4,26 @@
     <meta charset="UTF-8">
     <title>MANA | DROP 01</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+    /* Buscamos el contenedor de la polera */
+    .item-polera {
+        display: inline-block;
+        transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94); /* Movimiento fluido */
+        text-decoration: none;
+    }
+
+    /* Cuando el mouse entra al área */
+    .item-polera:hover {
+        transform: translateY(-20px); /* Se eleva 20px */
+        filter: brightness(1.1); /* Brilla un poquito */
+    }
+
+    /* Sombra opcional para que se vea real */
+    .item-polera:hover .foto-placeholder {
+        box-shadow: 0px 30px 60px rgba(255, 255, 255, 0.15);
+        border-color: #444;
+    }
+</style>
 </head>
 <body class="drop-page">
     <header>

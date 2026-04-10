@@ -8,11 +8,26 @@
 <body style="background: #000;">
     <header>
         <div class="logo"><img src="LOGO-MANA-BLANCO.png" alt="MANA Logo"></div>
-        <nav class="menu"><a href="index.html">INICIO</a><a href="drop01.html">VOLVER</a></nav>
+        <nav class="menu">
+            <a href="index.html">INICIO</a>
+            <a href="drop01.html">VOLVER</a>
+        </nav>
     </header>
 
-    <main style="padding-top: 150px; display: flex; justify-content: center; gap: 50px; flex-wrap: wrap;">
-        <div style="width: 450px; height: 600px; background: #0a0a0a; border: 1px solid #222;"></div>
+    <main style="padding-top: 150px; display: flex; justify-content: center; gap: 50px; flex-wrap: wrap; padding-bottom: 50px;">
+        
+        <div class="carrusel" id="carrusel-blanca" style="width: 450px; height: 600px; position: relative; background: #0a0a0a; border: 1px solid #222; overflow: hidden;">
+            <div class="carrusel-fotos" style="width: 100%; height: 100%;">
+                <img src="blanca-1.png" class="foto-activa" style="width: 100%; height: 100%; object-fit: contain; display: none;">
+                <img src="blanca-2.png" style="width: 100%; height: 100%; object-fit: contain; display: none;">
+                <img src="blanca-3.png" style="width: 100%; height: 100%; object-fit: contain; display: none;">
+                <img src="blanca-4.png" style="width: 100%; height: 100%; object-fit: contain; display: none;">
+            </div>
+            
+            <button class="prev" onclick="cambiarFoto(-1, 'carrusel-blanca')" style="position: absolute; left: 10px; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.5); color: white; border: none; padding: 15px; cursor: pointer; z-index: 10;"> < </button>
+            <button class="next" onclick="cambiarFoto(1, 'carrusel-blanca')" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.5); color: white; border: none; padding: 15px; cursor: pointer; z-index: 10;"> > </button>
+        </div>
+
         <div style="text-align: left; max-width: 400px;">
             <h1 style="letter-spacing: 5px; font-weight: 200; margin-bottom: 20px;">BLANCA QUÉ PUES!</h1>
             <p style="color: #888; margin-bottom: 30px; line-height: 2;">
@@ -22,8 +37,38 @@
                 <strong>TELA:</strong> Algodón<br>
                 <strong>ESTILO:</strong> Urbano Callejero Grafiti
             </p>
+            <p style="color: #fff; font-size: 24px; letter-spacing: 3px; margin-bottom: 30px;">130 Bs.</p>
             <a href="#" style="border: 1px solid #fff; padding: 15px 30px; color: #fff; text-decoration: none; letter-spacing: 2px; font-size: 12px;">PRÓXIMAMENTE</a>
         </div>
     </main>
-</body>
-</html>
+
+    <style>
+        .carrusel-fotos img.foto-activa {
+            display: block !important;
+        }
+    </style>
+
+    <script>
+    function cambiarFoto(n, idCarrusel) {
+        const carrusel = document.getElementById(idCarrusel);
+        const fotos = carrusel.querySelectorAll('.carrusel-fotos img');
+        const btnPrev = carrusel.querySelector('.prev');
+        const btnNext = carrusel.querySelector('.next');
+        let activa = 0;
+
+        fotos.forEach((foto, index) => {
+            if(foto.classList.contains('foto-activa')) {
+                activa = index;
+                foto.classList.remove('foto-activa');
+            }
+        });
+
+        activa += n;
+        fotos[activa].classList.add('foto-activa');
+
+        // Lógica de botones
+        btnPrev.style.display = (activa === 0) ? "none" : "block";
+        btnNext.style.display = (activa === fotos.length - 1) ? "none" : "block";
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {

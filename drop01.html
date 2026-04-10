@@ -20,75 +20,22 @@
         <p style="color: #555; letter-spacing: 5px; margin-bottom: 80px;">LA PRIMERA HUELLA</p>
         
         <div style="display: flex; justify-content: center; gap: 40px; flex-wrap: wrap;">
-           <div class="galeria-poleras">
-            <div class="item-polera">
-                <div class="foto-placeholder carrusel" id="carrusel-negra">
-                    <div class="carrusel-fotos">
-                        <img src="negra-1.png" class="foto-activa">
-                        <img src="negra-2.png">
-                        <img src="negra-3.png">
-                        <img src="negra-4.png">
-                        <img src="negra-5.png">
-                    </div>
-                    <button class="prev" onclick="cambiarFoto(-1, 'carrusel-negra')"> < </button>
-                    <button class="next" onclick="cambiarFoto(1, 'carrusel-negra')"> > </button>
-                </div>
-                <h3>POLERA OVERSIZE CÓNDOR TRIBAL</h3>
-                <p style="letter-spacing: 3px; margin: 10px 0;">150 Bs.</p>
-                <span>PRÓXIMAMENTE</span>
-            </div>
-
-            <div class="item-polera">
-                <div class="foto-placeholder carrusel" id="carrusel-blanca">
-                    <div class="carrusel-fotos">
-                        <img src="blanca-1.png" class="foto-activa">
-                        <img src="blanca-2.png">
-                        <img src="blanca-3.png">
-                        <img src="blanca-4.png">
-                    </div>
-                    <button class="prev" onclick="cambiarFoto(-1, 'carrusel-blanca')"> < </button>
-                    <button class="next" onclick="cambiarFoto(1, 'carrusel-blanca')"> > </button>
-                </div>
-                <h3>POLERA BOXYFIT BLANCA QUÉ PUES!</h3>
-                <p style="letter-spacing: 3px; margin: 10px 0;">130 Bs.</p>
-                <span>PRÓXIMAMENTE</span>
-            </div>
+          <div class="galeria-poleras">
+    <a href="producto-negra.html" class="item-polera">
+        <div class="foto-placeholder">
+            <img src="negra-1.png" style="width:100%; height:100%; object-fit:cover;">
         </div>
-    </main>
+        <h3>POLERA OVERSIZE CÓNDOR TRIBAL</h3>
+        <p>150 Bs.</p>
+        <span>VER DETALLES</span>
+    </a>
 
-    <script>
-    function cambiarFoto(n, idCarrusel) {
-        const carrusel = document.getElementById(idCarrusel);
-        const fotos = carrusel.querySelectorAll('.carrusel-fotos img');
-        const btnPrev = carrusel.querySelector('.prev');
-        const btnNext = carrusel.querySelector('.next');
-        let activa = 0;
-
-        // Encontrar la foto actual
-        fotos.forEach((foto, index) => {
-            if(foto.classList.contains('foto-activa')) {
-                activa = index;
-                foto.classList.remove('foto-activa');
-            }
-        });
-
-        // Calcular siguiente
-        activa += n;
-        
-        // Aplicar la nueva foto
-        fotos[activa].classList.add('foto-activa');
-
-        // Lógica de ocultar/mostrar botones
-        btnPrev.style.display = (activa === 0) ? "none" : "block";
-        btnNext.style.display = (activa === fotos.length - 1) ? "none" : "block";
-    }
-
-    // Configuración inicial: ocultar botones "atrás" al cargar
-    document.addEventListener("DOMContentLoaded", () => {
-        document.querySelectorAll('.carrusel').forEach(c => {
-            c.querySelector('.prev').style.display = "none";
-        });
-    });
-    </script>
-</body>
-</html>
+    <a href="producto-blanca.html" class="item-polera">
+        <div class="foto-placeholder">
+            <img src="blanca-1.png" style="width:100%; height:100%; object-fit:cover;">
+        </div>
+        <h3>POLERA BOXYFIT BLANCA QUÉ PUES!</h3>
+        <p>130 Bs.</p>
+        <span>VER DETALLES</span>
+    </a>
+</div>

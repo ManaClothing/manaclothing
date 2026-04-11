@@ -4,7 +4,6 @@
     src: url('mana-gotico.otf');
 }
 
-/* LA NUEVA PARA LA POLERA BLANCA */
 @font-face {
     font-family: 'ManaGraffiti';
     src: url('mana-graffiti.otf'); /* Asegúrate de que el nombre del archivo sea exacto */

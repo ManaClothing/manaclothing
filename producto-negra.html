@@ -46,9 +46,32 @@
         </div>
     </main>
 
-    <style>
+   <style>
+        /* Muestra la foto que tiene la clase 'foto-activa' y oculta las demás */
         .carrusel-fotos img.foto-activa {
             display: block !important;
+        }
+
+        /* --- ESTILO PARA LAS FLECHAS --- */
+        .prev, .next {
+            transition: all 0.3s ease-in-out !important; /* Hace que todo el movimiento sea suave */
+        }
+
+        /* Animación cuando pasas el mouse sobre la flecha IZQUIERDA */
+        .prev:hover {
+            background: rgba(255, 255, 255, 0.05) !important; /* Brillo muy sutil */
+            transform: translateX(-8px); /* Se mueve un poco a la izquierda */
+        }
+
+        /* Animación cuando pasas el mouse sobre la flecha DERECHA */
+        .next:hover {
+            background: rgba(255, 255, 255, 0.05) !important;
+            transform: translateX(8px); /* Se mueve un poco a la derecha */
+        }
+
+        /* Opcional: un efecto de pulso para que se note más el clic */
+        .prev:active, .next:active {
+            transform: scale(0.9);
         }
     </style>
 

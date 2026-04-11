@@ -450,7 +450,7 @@ header {
 
     /* Ajustamos la imagen del logo para celular */
     .logo img {
-        height: 55px !important; /* Un poco más pequeño para que no se vea tosco */
+        height: 60px !important; /* Un poco más pequeño para que no se vea tosco */
         width: auto;
         margin: 0 auto !important; /* Refuerza el centrado */
     }
@@ -535,4 +535,14 @@ header {
 .sobre-nosotros h2 {
     font-size: 2rem !important;
     margin-bottom: 15px;
+}
+/* AJUSTE ESPECÍFICO PARA EL LOGO DENTRO DE SOBRE NOSOTROS */
+.sobre-nosotros img, 
+.sobre-nosotros .logo-seccion { 
+    display: block !important;
+    max-width: 150px !important; /* Ajusta este número si lo quieres más o menos grande */
+    height: auto !important;
+    margin: 0 auto 20px auto !important; /* El 'auto' a los lados es lo que lo centra */
+    float: none !important; /* Por si tenía un float de PC */
+    position: static !important; /* Por si tenía una posición absoluta */
 }

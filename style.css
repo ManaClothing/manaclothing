@@ -322,227 +322,113 @@ header {
     text-transform: uppercase;
     font-family: sans-serif; /* O la fuente que estés usando */
 }
-/* --- ADAPTACIÓN PARA CELULARES --- */
+/* =============================================
+   --- ADAPTACIÓN PARA CELULARES (MÓVIL) ---
+============================================= */
 @media (max-width: 768px) {
     
-    /* 1. Ajustar el Menú */
+    /* 1. Header y Menú (Para que no estén pegados a las fotos) */
     header {
-        padding: 20px;
-        flex-direction: column; /* Logo arriba, links abajo */
-        gap: 15px;
-    }
-    
-    .menu {
-        gap: 15px;
-        font-size: 12px;
-    }
-
-    /* 2. Ajustar Títulos Gigantes */
-    .historia-section h1, .drop-title {
-        font-size: 3rem !important; /* Más pequeño para que no se corte */
-        letter-spacing: 8px !important;
-    }
-
-    /* 3. Ajustar la Galería del DROP 01 */
-    .minimal-gallery {
-        gap: 40px; /* Menos espacio entre poleras */
-        padding: 100px 5%;
-    }
-
-    .product-item {
-        width: 100%; /* Que la polera ocupe casi todo el ancho del cel */
-        max-width: 320px;
-    }
-
-    .image-wrapper {
-        height: 350px !important; /* Menos alto para que no haya que hacer tanto scroll */
-    }
-
-    /* 4. Ajustar Sobre Nosotros */
-    .historia-texto p {
-        font-size: 1.1rem;
-        padding: 0 20px;
-    }
-
-    .valor-card h3 {
-        font-size: 1.8rem;
-    }
-
-    .lista-vertical li {
-        font-size: 1.4rem;
-    }
-}
-/* Esto va dentro del @media (max-width: 768px) */
-    .hero { padding-top: 200px; }
-    .nosotros-container { padding-top: 250px; }
-    .drop-title { margin-top: 200px; }
-.carrusel {
-    position: relative;
-    background-color: #000; /* Negro puro */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 700px; /* <--- Dale una altura fija para que las fotos luzcan */
-    overflow: hidden;
-}
-
-.carrusel-fotos {
-    width: 100%;
-    height: 100%;
-}
-
-.carrusel-fotos img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover !important; /* <--- AHORA SÍ LLENARÁ TODO EL CUADRO */
-    object-position: top; /* Esto es para que no les corte la cabeza a los modelos */
-    display: none;
-}
-
-.carrusel-fotos img.foto-activa {
-    display: block;
-}
-
-.prev, .next {
-    position: absolute;
-    background: rgba(255,255,255,0.1);
-    color: white;
-    border: none;
-    padding: 20px 10px;
-    cursor: pointer;
-    z-index: 10;
-    transition: 0.3s;
-}
-
-.prev { left: 0; }
-.next { right: 0; }
-
-.prev:hover, .next:hover {
-    background: #fff;
-    color: #000;
-}
-/* Efecto para que el cuadro se eleve */
-.item-polera {
-    transition: transform 0.4s ease, box-shadow 0.4s ease; /* Hace que el movimiento sea suave */
-    cursor: pointer;
-}
-
-.item-polera:hover {
-    transform: translateY(-15px); /* Eleva la imagen 15 pixeles hacia arriba */
-}
-
-/* Efecto opcional: resalte en la imagen */
-.item-polera:hover .foto-placeholder {
-    border-color: #fff; /* El borde se vuelve blanco brillante al pasar el mouse */
-    box-shadow: 0px 20px 40px rgba(255, 255, 255, 0.1); /* Crea una sombra suave abajo */
-}
-/* --- ADAPTACIÓN PARA CELULARES --- */
-@media (max-width: 768px) {
-   @media (max-width: 768px) {
-    /* Ajustamos el contenedor del logo en el inicio */
-    .logo {
-        display: flex;
-        justify-content: center; /* Lo centra horizontalmente */
+        padding: 20px 10px !important;
+        flex-direction: column !important;
+        gap: 10px !important;
+        background: #000 !important;
+        position: fixed;
         width: 100%;
-        margin: 0 !important; /* Quitamos cualquier margen que lo empuje a los lados */
-        padding: 0 !important;
+        top: 0;
+        z-index: 1000;
     }
 
-    /* Ajustamos la imagen del logo para celular */
     .logo img {
-        height: 60px !important; /* Un poco más pequeño para que no se vea tosco */
-        width: auto;
-        margin: 0 auto !important; /* Refuerza el centrado */
-    }
-
-    /* Si el header tiene flex, nos aseguramos de que no lo tire a un lado */
-    header {
-        flex-direction: column; /* Pone el logo arriba y el menú abajo si es necesario */
-        align-items: center !important;
-        padding: 15px 0 !important;
+        height: 55px !important; /* Logo más estético en celular */
+        margin: 0 auto !important;
+        display: block;
     }
 
     .menu {
-        margin-right: 0 !important; /* Quitamos el margen que pusimos para PC */
-        margin-top: 10px; /* Separación entre logo y menú */
-        width: 100%;
-        text-align: center;
-    }
-}
-
-    header {
-        padding: 10px 20px;
+        display: flex;
+        justify-content: center;
+        gap: 20px !important; /* Separación entre INICIO y VOLVER */
+        margin: 0 !important;
     }
 
-    /* El contenido principal ya no es de lado a lado, ahora es de arriba a abajo */
+    .menu a {
+        font-size: 13px !important;
+        letter-spacing: 1px;
+    }
+
+    /* 2. Contenido Principal (Main) */
     main {
-        padding-top: 100px !important;
-        flex-direction: column;
-        align-items: center;
+        padding-top: 150px !important; /* Empuja todo hacia abajo para que no choque con el header */
+        flex-direction: column !important;
+        align-items: center !important;
         gap: 30px !important;
     }
 
-    /* El carrusel se ajusta al ancho del celular */
+    /* 3. Botones de Colección (Drop 01) */
+    /* Si tus botones tienen estas clases, se harán más grandes para el dedo */
+    .menu-colecciones a, .botones-filtro button, .drop-title + div a {
+        padding: 12px 25px !important;
+        font-size: 14px !important;
+        display: inline-block !important;
+        margin: 10px 5px !important;
+    }
+
+    /* 4. Carrusel de Fotos */
     .carrusel {
-        width: 90vw !important; /* Usa el 90% del ancho de la pantalla */
-        height: 120vw !important; /* Mantiene la proporción */
+        width: 90vw !important;
+        height: 110vw !important; /* Proporción ideal para celular */
+        margin: 0 auto !important;
     }
 
-    /* El bloque de texto se centra y se ajusta */
-    div[style*="text-align: left"] {
-        width: 90% !important;
-        text-align: center !important; /* Centramos el texto para que se vea mejor en móvil */
-        padding-top: 0 !important;
-    }
-
-    /* Ajustamos los títulos para que no se corten */
+    /* 5. Títulos (QUÉ PUES / CÓNDOR TRIBAL) */
     h1 {
-        font-size: 2.5rem !important;
-        line-height: 1.2 !important;
+        font-size: 2.8rem !important; /* Tamaño para que no se corte el graffiti/gótico */
+        text-align: center !important;
+        line-height: 1.1 !important;
     }
 
-    /* El botón de comprar ahora se hace más ancho para que sea fácil tocarlo con el dedo */
-    a[href*="wa.me"] {
+    div[style*="text-align: left"] {
+        width: 95% !important;
+        text-align: center !important;
+        padding: 0 !important;
+    }
+
+    /* 6. Sección SOBRE NOSOTROS (Ajuste de Logo e Historia) */
+    .sobre-nosotros, .historia-section {
+        padding: 40px 20px !important;
+        text-align: center !important;
+    }
+
+    /* El logo específico que estaba muy grande encima del texto */
+    .sobre-nosotros img[src*="LOGO"], 
+    .historia-section img[src*="LOGO"] {
+        max-width: 110px !important; /* Más pequeño como querías */
+        height: auto !important;
+        margin: 0 auto 20px auto !important;
         display: block !important;
-        width: 100%;
-        box-sizing: border-box;
+    }
+
+    .historia-texto p, .sobre-nosotros p {
+        font-size: 1rem !important;
+        line-height: 1.6 !important;
+        width: 100% !important;
+    }
+
+    /* 7. Galería de Productos (Index / Drop) */
+    .minimal-gallery {
+        padding: 50px 5% !important;
+        gap: 30px !important;
+    }
+
+    .product-item {
+        width: 100% !important;
+        max-width: 280px !important;
     }
 }
-/* --- AJUSTE SOBRE NOSOTROS PARA CELULAR --- */
-.sobre-nosotros { 
-    display: flex;
-    flex-direction: column; /* Pone la imagen arriba y el texto abajo */
-    align-items: center;
-    text-align: center; /* Centra todo el texto */
-    padding: 40px 20px !important;
-    width: 100% !important;
-    overflow: hidden; /* Evita que las cosas se salgan por los lados */
-}
 
-.sobre-nosotros .contenedor-texto, 
-.sobre-nosotros .contenedor-imagen {
-    width: 100% !important; /* Que ocupen todo el ancho del celular */
-    margin: 0 0 20px 0 !important; /* Espacio entre ellos */
-    padding: 0 !important;
-}
-
-.sobre-nosotros img {
-    max-width: 90%; /* Que la imagen no toque los bordes del cel */
-    height: auto;
-    margin: 0 auto;
-}
-
-.sobre-nosotros h2 {
-    font-size: 2rem !important;
-    margin-bottom: 15px;
-}
-/* AJUSTE ESPECÍFICO PARA EL LOGO DENTRO DE SOBRE NOSOTROS */
-.sobre-nosotros img, 
-.sobre-nosotros .logo-seccion { 
-    display: block !important;
-    max-width: 150px !important; /* Ajusta este número si lo quieres más o menos grande */
-    height: auto !important;
-    margin: 0 auto 20px auto !important; /* El 'auto' a los lados es lo que lo centra */
-    float: none !important; /* Por si tenía un float de PC */
-    position: static !important; /* Por si tenía una posición absoluta */
+/* --- BLOQUEO DE DESPLAZAMIENTO LATERAL (Fuera del media) --- */
+html, body {
+    overflow-x: hidden !important;
+    width: 100%;
 }

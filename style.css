@@ -481,3 +481,31 @@ header {
         box-sizing: border-box;
     }
 }
+/* --- AJUSTE SOBRE NOSOTROS PARA CELULAR --- */
+.sobre-nosotros { 
+    display: flex;
+    flex-direction: column; /* Pone la imagen arriba y el texto abajo */
+    align-items: center;
+    text-align: center; /* Centra todo el texto */
+    padding: 40px 20px !important;
+    width: 100% !important;
+    overflow: hidden; /* Evita que las cosas se salgan por los lados */
+}
+
+.sobre-nosotros .contenedor-texto, 
+.sobre-nosotros .contenedor-imagen {
+    width: 100% !important; /* Que ocupen todo el ancho del celular */
+    margin: 0 0 20px 0 !important; /* Espacio entre ellos */
+    padding: 0 !important;
+}
+
+.sobre-nosotros img {
+    max-width: 90%; /* Que la imagen no toque los bordes del cel */
+    height: auto;
+    margin: 0 auto;
+}
+
+.sobre-nosotros h2 {
+    font-size: 2rem !important;
+    margin-bottom: 15px;
+}

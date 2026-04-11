@@ -50,29 +50,30 @@
     </main>
 
     <style>
-        /* CSS PARA EL CARRUSEL */
-        .carrusel-fotos img.foto-activa {
-            display: block !important;
-        }
+    .carrusel-fotos img.foto-activa {
+        display: block !important;
+    }
 
-        .prev, .next {
-            transition: all 0.3s ease-in-out !important;
-        }
+    .prev, .next {
+        transition: all 0.3s ease-in-out !important;
+    }
 
-        .prev:hover {
-            background: rgba(255, 255, 255, 0.05) !important;
-            transform: translateX(-8px);
-        }
+    /* Solo movimiento para la flecha izquierda */
+    .prev:hover {
+        background: none !important; /* Quitamos el fondo por completo */
+        transform: translateX(-8px);
+    }
 
-        .next:hover {
-            background: rgba(255, 255, 255, 0.05) !important;
-            transform: translateX(8px);
-        }
+    /* Solo movimiento para la flecha derecha */
+    .next:hover {
+        background: none !important; /* Quitamos el fondo por completo */
+        transform: translateX(8px);
+    }
 
-        .prev:active, .next:active {
-            transform: scale(0.8);
-        }
-    </style>
+    .prev:active, .next:active {
+        transform: scale(0.8);
+    }
+</style>
 
     <script>
     function cambiarFoto(n, idCarrusel) {

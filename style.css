@@ -438,10 +438,37 @@ header {
 }
 /* --- ADAPTACIÓN PARA CELULARES --- */
 @media (max-width: 768px) {
-    /* El logo del header se hace un poco más pequeño para que no ocupe toda la pantalla */
-    .logo img {
-        height: 60px;
+   @media (max-width: 768px) {
+    /* Ajustamos el contenedor del logo en el inicio */
+    .logo {
+        display: flex;
+        justify-content: center; /* Lo centra horizontalmente */
+        width: 100%;
+        margin: 0 !important; /* Quitamos cualquier margen que lo empuje a los lados */
+        padding: 0 !important;
     }
+
+    /* Ajustamos la imagen del logo para celular */
+    .logo img {
+        height: 55px !important; /* Un poco más pequeño para que no se vea tosco */
+        width: auto;
+        margin: 0 auto !important; /* Refuerza el centrado */
+    }
+
+    /* Si el header tiene flex, nos aseguramos de que no lo tire a un lado */
+    header {
+        flex-direction: column; /* Pone el logo arriba y el menú abajo si es necesario */
+        align-items: center !important;
+        padding: 15px 0 !important;
+    }
+
+    .menu {
+        margin-right: 0 !important; /* Quitamos el margen que pusimos para PC */
+        margin-top: 10px; /* Separación entre logo y menú */
+        width: 100%;
+        text-align: center;
+    }
+}
 
     header {
         padding: 10px 20px;

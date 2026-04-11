@@ -16,14 +16,13 @@
 
     <main style="padding-top: 150px; display: flex; justify-content: center; gap: 50px; flex-wrap: wrap; padding-bottom: 50px;">
         
-        <div class="carrusel" id="carrusel-negra" style="width: 450px; height: 600px; position: relative; background: #0a0a0a; border: 1px solid #222; overflow: hidden;">
-            <div class="carrusel-fotos" style="width: 100%; height: 100%;">
-                <img src="negra-1.png" class="foto-activa" style="width: 100%; height: 100%; object-fit: contain; display: none;">
-                <img src="negra-2.png" style="width: 100%; height: 100%; object-fit: contain; display: none;">
-                <img src="negra-3.png" style="width: 100%; height: 100%; object-fit: contain; display: none;">
-                <img src="negra-4.png" style="width: 100%; height: 100%; object-fit: contain; display: none;">
-                <img src="negra-5.png" style="width: 100%; height: 100%; object-fit: contain; display: none;">
-            </div>
+        <div class="carrusel-fotos" style="width: 100%; height: 100%;">
+    <img src="negra-1.png" class="foto-activa" style="width: 100%; height: 100%; object-fit: cover; object-position: top; display: none;">
+    <img src="negra-2.png" style="width: 100%; height: 100%; object-fit: cover; object-position: top; display: none;">
+    <img src="negra-3.png" style="width: 100%; height: 100%; object-fit: cover; object-position: top; display: none;">
+    <img src="negra-4.png" style="width: 100%; height: 100%; object-fit: cover; object-position: top; display: none;">
+    <img src="negra-5.png" style="width: 100%; height: 100%; object-fit: cover; object-position: top; display: none;">
+</div>
             
             <button class="prev" onclick="cambiarFoto(-1, 'carrusel-negra')" style="position: absolute; left: 10px; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.5); color: white; border: none; padding: 15px; cursor: pointer; z-index: 10;"> < </button>
             <button class="next" onclick="cambiarFoto(1, 'carrusel-negra')" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.5); color: white; border: none; padding: 15px; cursor: pointer; z-index: 10;"> > </button>

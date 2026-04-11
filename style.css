@@ -436,3 +436,48 @@ header {
     border-color: #fff; /* El borde se vuelve blanco brillante al pasar el mouse */
     box-shadow: 0px 20px 40px rgba(255, 255, 255, 0.1); /* Crea una sombra suave abajo */
 }
+/* --- ADAPTACIÓN PARA CELULARES --- */
+@media (max-width: 768px) {
+    /* El logo del header se hace un poco más pequeño para que no ocupe toda la pantalla */
+    .logo img {
+        height: 60px;
+    }
+
+    header {
+        padding: 10px 20px;
+    }
+
+    /* El contenido principal ya no es de lado a lado, ahora es de arriba a abajo */
+    main {
+        padding-top: 100px !important;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px !important;
+    }
+
+    /* El carrusel se ajusta al ancho del celular */
+    .carrusel {
+        width: 90vw !important; /* Usa el 90% del ancho de la pantalla */
+        height: 120vw !important; /* Mantiene la proporción */
+    }
+
+    /* El bloque de texto se centra y se ajusta */
+    div[style*="text-align: left"] {
+        width: 90% !important;
+        text-align: center !important; /* Centramos el texto para que se vea mejor en móvil */
+        padding-top: 0 !important;
+    }
+
+    /* Ajustamos los títulos para que no se corten */
+    h1 {
+        font-size: 2.5rem !important;
+        line-height: 1.2 !important;
+    }
+
+    /* El botón de comprar ahora se hace más ancho para que sea fácil tocarlo con el dedo */
+    a[href*="wa.me"] {
+        display: block !important;
+        width: 100%;
+        box-sizing: border-box;
+    }
+}

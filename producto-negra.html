@@ -5,32 +5,35 @@
     <title>MANA | Cóndor Tribal</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body style="background: #000;">
+<body style="background: #000; color: #fff; margin: 0; font-family: sans-serif;">
+
     <header>
-        <div class="logo"><img src="LOGO-MANA-BLANCO.png" alt="MANA Logo"></div>
+        <div class="logo"><img src="LOGO-MANA-BLANCO.png" alt="MANA Logo" style="height: 50px;"></div>
         <nav class="menu">
-            <a href="index.html">INICIO</a>
-            <a href="drop01.html">VOLVER</a>
+            <a href="index.html" style="color: #fff; text-decoration: none; margin: 0 15px;">INICIO</a>
+            <a href="drop01.html" style="color: #fff; text-decoration: none; margin: 0 15px;">VOLVER</a>
         </nav>
     </header>
 
-    <main style="padding-top: 150px; display: flex; justify-content: center; align-items: flex-start; gap: 60px; flex-wrap: wrap; padding-bottom: 50px; max-width: 1200px; margin: 0 auto;">
+    <main style="padding-top: 120px; display: flex; justify-content: center; align-items: flex-start; gap: 60px; flex-wrap: wrap; padding-bottom: 50px; max-width: 1200px; margin: 0 auto;">
         
         <div class="carrusel" id="carrusel-negra" style="width: 450px; height: 600px; position: relative; background: #0a0a0a; border: 1px solid #222; overflow: hidden; flex-shrink: 0;">
-    <div class="carrusel-fotos" style="width: 100%; height: 100%;">
-        <img src="negra-1.png" class="foto-activa" style="width: 100%; height: 100%; object-fit: cover; object-position: top;">
-        <img src="negra-2.png" style="width: 100%; height: 100%; object-fit: cover; object-position: top; display: none;">
-        <img src="negra-3.png" style="width: 100%; height: 100%; object-fit: cover; object-position: top; display: none;">
-        <img src="negra-4.png" style="width: 100%; height: 100%; object-fit: cover; object-position: top; display: none;">
-        <img src="negra-5.png" style="width: 100%; height: 100%; object-fit: cover; object-position: top; display: none;">
-    </div>
-    <button class="prev" onclick="cambiarFoto(-1, 'carrusel-negra')" style="position: absolute; left: 0; top: 0; bottom: 0; width: 60px; background: rgba(0,0,0,0); color: #fff; border: none; cursor: pointer; z-index: 10; font-size: 30px; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease-in-out;"> ‹ </button>
-<button class="next" onclick="cambiarFoto(1, 'carrusel-negra')" style="position: absolute; right: 0; top: 0; bottom: 0; width: 60px; background: rgba(0,0,0,0); color: #fff; border: none; cursor: pointer; z-index: 10; font-size: 30px; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease-in-out;"> › </button>
+            <div class="carrusel-fotos" style="width: 100%; height: 100%;">
+                <img src="negra-1.png" class="foto-activa" style="width: 100%; height: 100%; object-fit: cover; object-position: top; display: none;">
+                <img src="negra-2.png" style="width: 100%; height: 100%; object-fit: cover; object-position: top; display: none;">
+                <img src="negra-3.png" style="width: 100%; height: 100%; object-fit: cover; object-position: top; display: none;">
+                <img src="negra-4.png" style="width: 100%; height: 100%; object-fit: cover; object-position: top; display: none;">
+                <img src="negra-5.png" style="width: 100%; height: 100%; object-fit: cover; object-position: top; display: none;">
+            </div>
+            
+            <button class="prev" onclick="cambiarFoto(-1, 'carrusel-negra')" style="position: absolute; left: 0; top: 0; bottom: 0; width: 60px; background: rgba(0,0,0,0); color: #fff; border: none; cursor: pointer; z-index: 10; font-size: 35px; display: flex; align-items: center; justify-content: center; outline: none;"> ‹ </button>
+            <button class="next" onclick="cambiarFoto(1, 'carrusel-negra')" style="position: absolute; right: 0; top: 0; bottom: 0; width: 60px; background: rgba(0,0,0,0); color: #fff; border: none; cursor: pointer; z-index: 10; font-size: 35px; display: flex; align-items: center; justify-content: center; outline: none;"> › </button>
+        </div>
 
         <div style="text-align: left; width: 400px; flex-shrink: 0; padding-top: 20px;">
-           <h1 style="font-family: 'ManaGotico', sans-serif; font-size: 3.8rem; font-weight: normal; letter-spacing: 3px; margin-bottom: 20px; color: #fff; text-transform: uppercase;">
-    CÓNDOR TRIBAL
-</h1>
+            <h1 style="font-family: 'ManaGotico', sans-serif; font-size: 3.5rem; font-weight: normal; letter-spacing: 2px; margin-bottom: 20px; color: #fff; text-transform: uppercase; line-height: 1;">
+                CÓNDOR TRIBAL
+            </h1>
             
             <p style="color: #888; margin-bottom: 30px; line-height: 2; font-size: 0.9rem; letter-spacing: 1px;">
                 <strong>TALLA:</strong> L<br>
@@ -42,36 +45,32 @@
             
             <p style="color: #fff; font-size: 24px; letter-spacing: 3px; margin-bottom: 40px; font-weight: 600;">150 Bs.</p>
             
-            <a href="https://wa.me/59170350964" style="border: 1px solid #fff; padding: 15px 40px; color: #fff; text-decoration: none; letter-spacing: 2px; font-size: 11px; font-weight: 700; transition: 0.3s;">COMPRAR AHORA</a>
+            <a href="https://wa.me/59170350964?text=Hola!%20Quiero%20la%20polera%20Condor%20Tribal%20Negra" target="_blank" style="border: 1px solid #fff; padding: 15px 40px; color: #fff; text-decoration: none; letter-spacing: 2px; font-size: 11px; font-weight: 700; transition: 0.3s; display: inline-block;">COMPRAR AHORA</a>
         </div>
     </main>
 
-   <style>
-        /* Muestra la foto que tiene la clase 'foto-activa' y oculta las demás */
+    <style>
+        /* CSS PARA EL CARRUSEL */
         .carrusel-fotos img.foto-activa {
             display: block !important;
         }
 
-        /* --- ESTILO PARA LAS FLECHAS --- */
         .prev, .next {
-            transition: all 0.3s ease-in-out !important; /* Hace que todo el movimiento sea suave */
+            transition: all 0.3s ease-in-out !important;
         }
 
-        /* Animación cuando pasas el mouse sobre la flecha IZQUIERDA */
         .prev:hover {
-            background: rgba(255, 255, 255, 0.05) !important; /* Brillo muy sutil */
-            transform: translateX(-8px); /* Se mueve un poco a la izquierda */
+            background: rgba(255, 255, 255, 0.05) !important;
+            transform: translateX(-8px);
         }
 
-        /* Animación cuando pasas el mouse sobre la flecha DERECHA */
         .next:hover {
             background: rgba(255, 255, 255, 0.05) !important;
-            transform: translateX(8px); /* Se mueve un poco a la derecha */
+            transform: translateX(8px);
         }
 
-        /* Opcional: un efecto de pulso para que se note más el clic */
         .prev:active, .next:active {
-            transform: scale(0.9);
+            transform: scale(0.8);
         }
     </style>
 
@@ -90,17 +89,25 @@
             }
         });
 
-        activa += n;
-        fotos[activa].classList.add('foto-activa');
+        let nuevaPosicion = activa + n;
+        
+        // Evitar que se salga del rango de fotos
+        if (nuevaPosicion >= 0 && nuevaPosicion < fotos.length) {
+            fotos[nuevaPosicion].classList.add('foto-activa');
+            activa = nuevaPosicion;
+        } else {
+            fotos[activa].classList.add('foto-activa');
+        }
 
-        // Ocultar flechas si es la primera o la última
-        btnPrev.style.display = (activa === 0) ? "none" : "block";
-        btnNext.style.display = (activa === fotos.length - 1) ? "none" : "block";
+        // Mostrar/Ocultar flechas
+        btnPrev.style.visibility = (activa === 0) ? "hidden" : "visible";
+        btnNext.style.visibility = (activa === fotos.length - 1) ? "hidden" : "visible";
     }
 
-    // Al cargar, ocultar la flecha de "atrás" porque empezamos en la foto 1
+    // Configuración inicial
     document.addEventListener("DOMContentLoaded", () => {
-        document.querySelector('.prev').style.display = "none";
+        const carrusel = document.getElementById('carrusel-negra');
+        carrusel.querySelector('.prev').style.visibility = "hidden";
     });
     </script>
 </body>

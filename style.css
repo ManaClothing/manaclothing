@@ -195,12 +195,6 @@ header {
     margin-bottom: 15px;
 }
 
-.product-badge.top-left { top: 20px; left: 20px; }
-.product-badge.top-right { top: 20px; right: 20px; }
-.product-badge.red { background-color: #a00; } /* Fondo rojo */
-/* --- NUEVA GALERÍA MINIMALISTA PARA DROP 01 --- */
-
-/* Contenedor principal de la galería */
 .minimal-gallery {
     display: flex;
     justify-content: center;
